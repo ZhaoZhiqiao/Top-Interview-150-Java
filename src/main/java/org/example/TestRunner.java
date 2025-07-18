@@ -25,7 +25,8 @@ public class TestRunner {
 //        testRotate(solution);
 //        testMaxProfit(solution);
 //        testMaxProfit2(solution);
-        testCanJump(solution);
+//        testCanJump(solution);
+        testJump(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -108,11 +109,20 @@ public class TestRunner {
     }
 
     /**
-     * 55. 跳跃游戏
+     * 测试 55. 跳跃游戏
      */
     private static void testCanJump(TopInterview150Part1 solution) {
         int[] nums = {2, 3, 1, 1, 4};
         boolean result = solution.canJump(nums);
         SimpleTest.testReturnWithArray("55. 跳跃游戏", result, nums);
+    }
+
+    /**
+     * 测试 45. 跳跃游戏 II
+     */
+    private static void testJump(TopInterview150Part1 solution) {
+        int[] nums = {2, 3, 1, 1, 4};
+        int result = solution.jump(nums);
+        SimpleTest.testReturnWithArray("45. 跳跃游戏 II", result, nums);
     }
 }

@@ -117,10 +117,10 @@ public class TopInterview150Part1 {
      */
     public int maxProfit2(int[] prices) {
         int lowPrice = Integer.MAX_VALUE, profit = 0;
-        for(int price : prices) {
-            if(price < lowPrice) {
+        for (int price : prices) {
+            if (price < lowPrice) {
                 lowPrice = price;
-            } else if(price > lowPrice) {
+            } else if (price > lowPrice) {
                 profit += price - lowPrice;
                 lowPrice = price; // 更新低价为当前价格
             }
@@ -132,12 +132,28 @@ public class TopInterview150Part1 {
      * 55. 跳跃游戏
      */
     public boolean canJump(int[] nums) {
-        int maxStep = 0;
+        int maxDis = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (i > maxStep) return false;
-            maxStep = Math.max(maxStep, i + nums[i]);
+            if (i > maxDis) return false;
+            maxDis = Math.max(maxDis, i + nums[i]);
         }
         return true;
     }
 
+    /**
+     * 测试 45. 跳跃游戏 II
+     */
+    public int jump(int[] nums) {
+        int maxDis = 0;
+        int end = 0;
+        int steps = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            maxDis = Math.max(maxDis, i + nums[i]);
+            if (i == end) {
+                steps++;
+                end = maxDis;
+            }
+        }
+        return steps;
+    }
 }

@@ -45,7 +45,7 @@ Top-Interview-150-Java/
 - [x] 买卖股票的最佳时机 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 买卖股票的最佳时机 II ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 跳跃游戏 ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] 跳跃游戏 II ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] 跳跃游戏 II ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] H 指数 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] O(1) 时间插入、删除和获取随机元素 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 除自身以外数组的乘积 ![中等](https://img.shields.io/badge/-中等-orange)
@@ -235,9 +235,9 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-9%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-10%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-5%2F39-green)
-![Medium](https://img.shields.io/badge/中等-4%2F77-orange)
+![Medium](https://img.shields.io/badge/中等-5%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-0%2F34-red)
 
 ---
