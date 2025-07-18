@@ -74,4 +74,27 @@ public class TopInterview150Part1 {
         return element;
     }
 
+    /**
+     * 189. 轮转数组
+     */
+    public void rotate(int[] nums, int k) {
+        int count = gcd(nums.length, k);
+        for (int i = 0; i < count; i++) {
+            int before = nums[i], index = i, temp;
+            while (true) {
+                int nextIndex = (index + k) % nums.length;
+                if (nextIndex == i) break;
+                temp = nums[nextIndex];
+                nums[nextIndex] = before;
+                before = temp;
+                index = nextIndex;
+            }
+            nums[i] = before;
+        }
+    }
+
+    private int gcd(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
+    }
+
 }

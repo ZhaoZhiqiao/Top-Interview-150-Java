@@ -21,7 +21,8 @@ public class TestRunner {
 //        testRemoveElement(solution);
 //        testRemoveDuplicates(solution);
 //        testRemoveDuplicates2(solution);
-        testMajorityElement(solution);
+//        testMajorityElement(solution);
+        testRotate(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -69,8 +70,19 @@ public class TestRunner {
      * 测试 169. 多数元素
      */
     private static void testMajorityElement(TopInterview150Part1 solution) {
-        int[] nums = {3,2,3};
+        int[] nums = {3, 2, 3};
         int result = solution.majorityElement(nums);
         SimpleTest.testReturnWithArray("169. 多数元素", result, nums);
+    }
+
+    /**
+     * 测试 189. 轮转数组
+     */
+    private static void testRotate(TopInterview150Part1 solution) {
+        int[] nums = {1, 2, 3, 4, 5, 6, 7};
+        int k = 3;
+        int[] original = SimpleTest.copy(nums);
+        solution.rotate(nums, k);
+        SimpleTest.testInPlace("189. 轮转数组", original, nums, k);
     }
 }
