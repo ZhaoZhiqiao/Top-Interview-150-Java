@@ -24,7 +24,8 @@ public class TestRunner {
 //        testMajorityElement(solution);
 //        testRotate(solution);
 //        testMaxProfit(solution);
-        testMaxProfit2(solution);
+//        testMaxProfit2(solution);
+        testCanJump(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -104,5 +105,14 @@ public class TestRunner {
         int[] nums = {7, 1, 5, 3, 6, 4};
         int result = solution.maxProfit2(nums);
         SimpleTest.testReturnWithArray("122. 买卖股票的最佳时机 II", result, nums);
+    }
+
+    /**
+     * 55. 跳跃游戏
+     */
+    private static void testCanJump(TopInterview150Part1 solution) {
+        int[] nums = {2, 3, 1, 1, 4};
+        boolean result = solution.canJump(nums);
+        SimpleTest.testReturnWithArray("55. 跳跃游戏", result, nums);
     }
 }

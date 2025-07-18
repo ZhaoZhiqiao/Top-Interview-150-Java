@@ -128,4 +128,16 @@ public class TopInterview150Part1 {
         return profit;
     }
 
+    /**
+     * 55. 跳跃游戏
+     */
+    public boolean canJump(int[] nums) {
+        int maxStep = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i > maxStep) return false;
+            maxStep = Math.max(maxStep, i + nums[i]);
+        }
+        return true;
+    }
+
 }
