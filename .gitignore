@@ -1,0 +1,332 @@
+# ============================================================================
+# Java Maven 刷题项目 .gitignore
+# 适用于 IntelliJ IDEA + Linux/Windows 跨平台开发
+# ============================================================================
+
+# ============================================================================
+# Java 编译产物
+# ============================================================================
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# JVM dump files
+*.hprof
+
+# ============================================================================
+# Maven 构建产物
+# ============================================================================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven 缓存和依赖
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties
+
+# ============================================================================
+# IntelliJ IDEA
+# ============================================================================
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# IDEA 用户特定文件
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries
+.idea/shelf
+
+# IDEA 生成的文件
+out/
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# ============================================================================
+# Eclipse IDE
+# ============================================================================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# Eclipse 核心
+.metadata
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java IDE for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+# ============================================================================
+# NetBeans IDE
+# ============================================================================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ============================================================================
+# Visual Studio Code
+# ============================================================================
+.vscode/
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# ============================================================================
+# 操作系统特定文件
+# ============================================================================
+# Mac OS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+# ============================================================================
+# 版本控制系统
+# ============================================================================
+# Git
+.git/
+.gitattributes
+
+# SVN
+.svn/
+
+# Mercurial
+.hg/
+.hgignore
+.hgtags
+
+# ============================================================================
+# 开发工具和编辑器
+# ============================================================================
+# Vim
+*.swp
+*.swo
+
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# ============================================================================
+# 项目特定忽略
+# ============================================================================
+# 个人笔记和临时文件
+notes/
+temp/
+tmp/
+*.tmp
+*.temp
+
+# 测试输出
+test-output/
+
+# 配置文件（可能包含敏感信息）
+config.properties
+application-local.properties
+
+# 本地环境变量
+.env
+.env.local
+
+# 依赖分析
+dependency-reduced-pom.xml
+
+# ============================================================================
+# 备份文件
+# ============================================================================
+*.bak
+*.backup
+*.old
+*.orig
+
+# ============================================================================
+# 压缩文件
+# ============================================================================
+*.7z
+*.dmg
+*.gz
+*.iso
+*.tar
+
+# ============================================================================
+# 日志文件
+# ============================================================================
+logs/
+*.log.*
+
+# ============================================================================
+# 缓存目录
+# ============================================================================
+.cache/
+cache/
+
+# Node.js (如果项目中有前端工具)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================================
+# 其他
+# ============================================================================
+# 系统生成的文件
+*.pid
+*.seed
+*.pid.lock
+
+# 覆盖率报告
+.nyc_output/
+coverage/
+
+# 性能分析文件
+*.prof
