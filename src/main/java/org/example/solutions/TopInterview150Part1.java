@@ -17,4 +17,20 @@ public class TopInterview150Part1 {
         while (m - 1 >= 0) nums1[m - 1] = nums1[--m];
         while (n - 1 >= 0) nums1[n - 1] = nums2[--n];
     }
+
+    /**
+     * 27. 移除元素
+     */
+    public int removeElement(int[] nums, int val) {
+        int length = nums.length;
+        int count = 0;
+        for (int i = 0; i < length; i++) {
+            if (nums[i] == val) {
+                count++;
+                continue;
+            }
+            nums[i - count] = nums[i];
+        }
+        return length - count;
+    }
 }

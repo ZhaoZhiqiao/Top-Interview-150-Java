@@ -17,7 +17,8 @@ public class TestRunner {
         TopInterview150Part1 solution = new TopInterview150Part1();
 
         // 🔽 只保留您想测试的题目，注释掉其他的
-        testMerge(solution);
+//        testMerge(solution);
+        testRemoveElement(solution);
     }
 
     /**
@@ -30,4 +31,16 @@ public class TestRunner {
         solution.merge(nums1, 3, nums2, 3);
         SimpleTest.testInPlace("88. 合并两个有序数组", original, nums1);
     }
+
+    /**
+     * 测试 27. 移除元素
+     */
+    private static void testRemoveElement(TopInterview150Part1 solution) {
+        int[] nums = {0, 1, 2, 2, 3, 0, 4, 2};
+        int val = 2;
+        int result = solution.removeElement(nums, val);
+        SimpleTest.testReturn("27. 移除元素", result, nums, val);
+    }
+
+
 }
