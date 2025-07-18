@@ -6,14 +6,15 @@ package org.example.solutions;
  */
 @SuppressWarnings({"unused", "Duplicates"})
 public class TopInterview150Part1 {
-    // 待续：为1-50题添加解决方案
-    // 这是一个模板 - 您可以在处理这些题目时在这里添加解决方案
-
     /**
-     * 示例占位方法
-     * 用实际的LeetCode解决方案替换此方法
+     * 88. 合并两个有序数组
      */
-    public void placeholder() {
-        // 未来实现的占位符
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        for (int i = m + n - 1; i >= 0 && m > 0 && n > 0; i--) {
+            nums1[i] = nums1[m - 1] > nums2[n - 1] ? nums1[--m] : nums2[--n];
+
+        }
+        while (m - 1 >= 0) nums1[m - 1] = nums1[--m];
+        while (n - 1 >= 0) nums1[n - 1] = nums2[--n];
     }
 }

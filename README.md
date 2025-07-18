@@ -36,7 +36,7 @@ Top-Interview-150-Java/
 ## 📈 题目列表
 
 ### 🏷️ 数组 / 字符串
-- [ ] 合并两个有序数组 ![简单](https://img.shields.io/badge/-简单-green)
+- [x] 合并两个有序数组![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 移除元素 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 删除有序数组中的重复项 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 删除有序数组中的重复项 II ![中等](https://img.shields.io/badge/-中等-orange)
@@ -235,8 +235,8 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-0%2F150-red)
-![Easy](https://img.shields.io/badge/简单-0%2F39-green)
+![Progress](https://img.shields.io/badge/完成进度-1%2F150-red)
+![Easy](https://img.shields.io/badge/简单-1%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-0%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-0%2F34-red)
 
