@@ -20,7 +20,9 @@ public class TestRunner {
 //        testMerge(solution);
 //        testRemoveElement(solution);
 //        testRemoveDuplicates(solution);
-        testRemoveDuplicates2(solution);
+//        testRemoveDuplicates2(solution);
+        testMajorityElement(solution);
+        // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
     /**
@@ -62,4 +64,13 @@ public class TestRunner {
         SimpleTest.testReturnWithArray("80. 删除有序数组中的重复项 II", result, nums);
     }
 
+
+    /**
+     * 测试 169. 多数元素
+     */
+    private static void testMajorityElement(TopInterview150Part1 solution) {
+        int[] nums = {3,2,3};
+        int result = solution.majorityElement(nums);
+        SimpleTest.testReturnWithArray("169. 多数元素", result, nums);
+    }
 }

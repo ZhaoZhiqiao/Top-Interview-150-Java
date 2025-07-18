@@ -60,4 +60,18 @@ public class TopInterview150Part1 {
         return size + 1;
     }
 
+    /**
+     * 169. 多数元素
+     */
+    public int majorityElement(int[] nums) {
+        int count = 0, element = 0;
+        for (int x : nums) {
+            if (count == 0) {
+                element = x;
+            }
+            count += (x == element) ? 1 : -1;
+        }
+        return element;
+    }
+
 }
