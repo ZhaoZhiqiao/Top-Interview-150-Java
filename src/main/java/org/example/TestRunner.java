@@ -22,7 +22,8 @@ public class TestRunner {
 //        testRemoveDuplicates(solution);
 //        testRemoveDuplicates2(solution);
 //        testMajorityElement(solution);
-        testRotate(solution);
+//        testRotate(solution);
+        testMaxProfit(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -84,5 +85,14 @@ public class TestRunner {
         int[] original = SimpleTest.copy(nums);
         solution.rotate(nums, k);
         SimpleTest.testInPlace("189. 轮转数组", original, nums, k);
+    }
+
+    /**
+     * 测试 189. 轮转数组
+     */
+    private static void testMaxProfit(TopInterview150Part1 solution) {
+        int[] nums = {7, 1, 5, 3, 6, 4};
+        int result = solution.maxProfit(nums);
+        SimpleTest.testReturnWithArray("121. 买卖股票的最佳时机", result, nums);
     }
 }

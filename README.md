@@ -42,7 +42,7 @@ Top-Interview-150-Java/
 - [x] 删除有序数组中的重复项 II ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 多数元素 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 轮转数组 ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] 买卖股票的最佳时机 ![简单](https://img.shields.io/badge/-简单-green)
+- [x] 买卖股票的最佳时机 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 买卖股票的最佳时机 II ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 跳跃游戏 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 跳跃游戏 II ![中等](https://img.shields.io/badge/-中等-orange)
@@ -235,8 +235,8 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-6%2F150-red)
-![Easy](https://img.shields.io/badge/简单-4%2F39-green)
+![Progress](https://img.shields.io/badge/完成进度-7%2F150-red)
+![Easy](https://img.shields.io/badge/简单-5%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-2%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-0%2F34-red)
 
@@ -250,7 +250,7 @@ Top-Interview-150-Java/
 
 ## 🔧 技术栈
 
-- **语言**：Java 8+
+- **语言**：Java 17+
 - **构建工具**：Maven
 - **数据结构**：数组、链表、二叉树、字典树、四叉树等
 - **算法类型**：双指针、滑动窗口、回溯、动态规划、广度优先搜索、深度优先搜索等

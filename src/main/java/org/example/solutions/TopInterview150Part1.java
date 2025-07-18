@@ -97,4 +97,19 @@ public class TopInterview150Part1 {
         return b == 0 ? a : gcd(b, a % b);
     }
 
+    /**
+     * 121. 买卖股票的最佳时机
+     */
+    public int maxProfit(int[] prices) {
+        int profit = 0, minPrice = Integer.MAX_VALUE;
+        for (int price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            } else {
+                profit = Math.max(profit, price - minPrice);
+            }
+        }
+        return profit;
+    }
+
 }
