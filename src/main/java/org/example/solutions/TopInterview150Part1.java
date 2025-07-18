@@ -112,4 +112,20 @@ public class TopInterview150Part1 {
         return profit;
     }
 
+    /**
+     * 122. 买卖股票的最佳时机 II
+     */
+    public int maxProfit2(int[] prices) {
+        int lowPrice = Integer.MAX_VALUE, profit = 0;
+        for(int price : prices) {
+            if(price < lowPrice) {
+                lowPrice = price;
+            } else if(price > lowPrice) {
+                profit += price - lowPrice;
+                lowPrice = price; // 更新低价为当前价格
+            }
+        }
+        return profit;
+    }
+
 }

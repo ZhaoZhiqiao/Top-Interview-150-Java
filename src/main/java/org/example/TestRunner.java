@@ -23,7 +23,8 @@ public class TestRunner {
 //        testRemoveDuplicates2(solution);
 //        testMajorityElement(solution);
 //        testRotate(solution);
-        testMaxProfit(solution);
+//        testMaxProfit(solution);
+        testMaxProfit2(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -88,11 +89,20 @@ public class TestRunner {
     }
 
     /**
-     * 测试 189. 轮转数组
+     * 测试 121. 买卖股票的最佳时机
      */
     private static void testMaxProfit(TopInterview150Part1 solution) {
         int[] nums = {7, 1, 5, 3, 6, 4};
         int result = solution.maxProfit(nums);
         SimpleTest.testReturnWithArray("121. 买卖股票的最佳时机", result, nums);
+    }
+
+    /**
+     * 测试 122. 买卖股票的最佳时机 II
+     */
+    private static void testMaxProfit2(TopInterview150Part1 solution) {
+        int[] nums = {7, 1, 5, 3, 6, 4};
+        int result = solution.maxProfit2(nums);
+        SimpleTest.testReturnWithArray("122. 买卖股票的最佳时机 II", result, nums);
     }
 }

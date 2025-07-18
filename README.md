@@ -43,7 +43,7 @@ Top-Interview-150-Java/
 - [x] 多数元素 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 轮转数组 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 买卖股票的最佳时机 ![简单](https://img.shields.io/badge/-简单-green)
-- [ ] 买卖股票的最佳时机 II ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] 买卖股票的最佳时机 II ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 跳跃游戏 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 跳跃游戏 II ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] H 指数 ![中等](https://img.shields.io/badge/-中等-orange)
@@ -235,9 +235,9 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-7%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-8%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-5%2F39-green)
-![Medium](https://img.shields.io/badge/中等-2%2F77-orange)
+![Medium](https://img.shields.io/badge/中等-3%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-0%2F34-red)
 
 ---
