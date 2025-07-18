@@ -18,7 +18,8 @@ public class TestRunner {
 
         // 🔽 只保留您想测试的题目，注释掉其他的
 //        testMerge(solution);
-        testRemoveElement(solution);
+//        testRemoveElement(solution);
+        testRemoveDuplicates(solution);
     }
 
     /**
@@ -40,6 +41,15 @@ public class TestRunner {
         int val = 2;
         int result = solution.removeElement(nums, val);
         SimpleTest.testReturn("27. 移除元素", result, nums, val);
+    }
+
+    /**
+     * 测试 26. 删除有序数组中的重复项
+     */
+    private static void testRemoveDuplicates(TopInterview150Part1 solution) {
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int result = solution.removeDuplicates(nums);
+        SimpleTest.testReturnWithArray("26. 删除有序数组中的重复项", result, nums);
     }
 
 
