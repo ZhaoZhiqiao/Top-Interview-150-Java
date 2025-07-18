@@ -39,7 +39,7 @@ Top-Interview-150-Java/
 - [x] 合并两个有序数组![简单](https://img.shields.io/badge/-简单-green)
 - [x] 移除元素 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 删除有序数组中的重复项 ![简单](https://img.shields.io/badge/-简单-green)
-- [ ] 删除有序数组中的重复项 II ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] 删除有序数组中的重复项 II ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 多数元素 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 轮转数组 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 买卖股票的最佳时机 ![简单](https://img.shields.io/badge/-简单-green)
@@ -235,9 +235,9 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-3%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-4%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-3%2F39-green)
-![Medium](https://img.shields.io/badge/中等-0%2F77-orange)
+![Medium](https://img.shields.io/badge/中等-1%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-0%2F34-red)
 
 ---
