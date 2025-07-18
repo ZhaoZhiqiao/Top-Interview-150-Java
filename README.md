@@ -1,6 +1,6 @@
 # Leetcode-JAVA练习笔记
 
-> Leetcode 面试经典 150 题 做题记录 多刷复健
+> Leetcode 面试经典 150 题 做题记录
 
 ---
 
