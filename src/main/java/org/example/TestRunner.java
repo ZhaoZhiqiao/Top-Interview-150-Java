@@ -27,7 +27,8 @@ public class TestRunner {
 //        testMaxProfit2(solution);
 //        testCanJump(solution);
 //        testJump(solution);
-        testHIndex(solution);
+//        testHIndex(solution);
+        testRandomizedSet(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -135,6 +136,23 @@ public class TestRunner {
         int result = solution.hIndex(nums);
         SimpleTest.testReturnWithArray("274. H 指数", result, nums);
     }
+
+    /**
+     * 380. O(1) 时间插入、删除和获取随机元素
+     */
+    private static void testRandomizedSet(TopInterview150Part1 solution) {
+        TopInterview150Part1.RandomizedSet randomizedSet = solution.new RandomizedSet();
+        boolean step1 = randomizedSet.insert(1); // 向集合中插入 1 。返回 true 表示 1 被成功地插入。
+        boolean step2 = randomizedSet.remove(2); // 返回 false ，表示集合中不存在 2。
+        boolean step3 = randomizedSet.insert(2); // 向集合中插入 2 。返回 true 。集合现在包含 [1,2]。
+        int step4 = randomizedSet.getRandom(); // getRandom 应随机返回 1 或 2。
+        boolean step5 = randomizedSet.remove(1); // 从集合中移除 1 ，返回 true 。集合现在包含 [2]。
+        boolean step6 = randomizedSet.insert(2); // 2 已在集合中，所以返回 false。
+        int step7 = randomizedSet.getRandom(); // 由于 2 是集合中唯一的数字，getRandom 总是返回 2。
+        boolean result = step1 && !step2 && step3 && (step4 == 1 || step4 == 2) && step5 && !step6 && step7 == 2;
+        SimpleTest.testReturn("380. O(1) 时间插入、删除和获取随机元素", result);
+    }
+
 
 
 }

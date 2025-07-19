@@ -1,7 +1,7 @@
 package org.example.solutions;
 
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Top Interview 150 - 前50题
@@ -15,7 +15,6 @@ public class TopInterview150Part1 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         for (int i = m + n - 1; i >= 0 && m > 0 && n > 0; i--) {
             nums1[i] = nums1[m - 1] > nums2[n - 1] ? nums1[--m] : nums2[--n];
-
         }
         while (m - 1 >= 0) nums1[m - 1] = nums1[--m];
         while (n - 1 >= 0) nums1[n - 1] = nums2[--n];
@@ -173,4 +172,48 @@ public class TopInterview150Part1 {
         return index;
     }
 
+    /**
+     * 380. O(1) 时间插入、删除和获取随机元素
+     */
+    @SuppressWarnings("InnerClassMayBeStatic")
+    public class RandomizedSet {
+        HashMap<Integer, Integer> map;
+        List<Integer> list;
+        Random random;
+
+        public RandomizedSet() {
+            map = new HashMap<>();
+            list = new ArrayList<>();
+            random = new Random();
+        }
+
+        public boolean insert(int val) {
+            if (map.containsKey(val)) {
+                return false;
+            } else {
+                list.add(val);
+                map.put(val, list.size() - 1);
+                return true;
+            }
+        }
+
+        public boolean remove(int val) {
+            if (!map.containsKey(val)) {
+                return false;
+            } else {
+                Integer index = map.get(val);
+                Integer LastElement = list.getLast();
+                list.set(index, LastElement);
+                map.put(LastElement, index);
+                list.removeLast();
+                map.remove(val);
+                return true;
+            }
+        }
+
+        public int getRandom() {
+            int index = random.nextInt(list.size());
+            return list.get(index);
+        }
+    }
 }
