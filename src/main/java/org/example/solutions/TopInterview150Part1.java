@@ -1,5 +1,8 @@
 package org.example.solutions;
 
+
+import java.util.Arrays;
+
 /**
  * Top Interview 150 - 前50题
  * 该类包含 Top Interview 150 列表中前50题的解决方案。
@@ -141,7 +144,7 @@ public class TopInterview150Part1 {
     }
 
     /**
-     * 测试 45. 跳跃游戏 II
+     * 45. 跳跃游戏 II
      */
     public int jump(int[] nums) {
         int maxDis = 0;
@@ -156,4 +159,18 @@ public class TopInterview150Part1 {
         }
         return steps;
     }
+
+    /**
+     * 274. H 指数
+     */
+    public int hIndex(int[] citations) {
+        Arrays.sort(citations);
+        int index = 0, i = citations.length - 1;
+        while (i >= 0 && citations[i] > index) {
+            index++;
+            i--;
+        }
+        return index;
+    }
+
 }

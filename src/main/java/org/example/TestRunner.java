@@ -26,7 +26,8 @@ public class TestRunner {
 //        testMaxProfit(solution);
 //        testMaxProfit2(solution);
 //        testCanJump(solution);
-        testJump(solution);
+//        testJump(solution);
+        testHIndex(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -125,4 +126,15 @@ public class TestRunner {
         int result = solution.jump(nums);
         SimpleTest.testReturnWithArray("45. 跳跃游戏 II", result, nums);
     }
+
+    /**
+     * 测试 274. H 指数
+     */
+    private static void testHIndex(TopInterview150Part1 solution) {
+        int[] nums = {3, 0, 6, 1, 5};
+        int result = solution.hIndex(nums);
+        SimpleTest.testReturnWithArray("274. H 指数", result, nums);
+    }
+
+
 }
