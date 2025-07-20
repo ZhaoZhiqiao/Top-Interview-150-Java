@@ -36,7 +36,8 @@ public class TestRunner {
 //        testRomanToInt(solution);
 //        testTntToRoman(solution);
 //        testLengthOfLastWord(solution);
-        testLongestCommonPrefix(solution);
+//        testLongestCommonPrefix(solution);
+        testReverseWords(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -234,5 +235,14 @@ public class TestRunner {
         String[] strings = {"flower", "flow", "flight"};
         String result = solution.longestCommonPrefix(strings);
         SimpleTest.testReturnWithArray("14. 最长公共前缀", result, strings);
+    }
+
+    /**
+     * 151. 反转字符串中的单词
+     */
+    private static void testReverseWords(TopInterview150Part1 solution) {
+        String s = "the sky is blue";
+        String result = solution.reverseWords(s);
+        SimpleTest.testReturn("151. 反转字符串中的单词", result, s);
     }
 }

@@ -389,4 +389,27 @@ public class TopInterview150Part1 {
         }
         return prefix.toString();
     }
+
+    /**
+     * 151. 反转字符串中的单词
+     */
+    public String reverseWords(String s) {
+        StringBuilder result = new StringBuilder();
+        int end = s.length() - 1;
+        int start = end;
+        while (start >= 0) {
+            while (end >= 0 && s.charAt(end) == ' ') {
+                end--;
+                start--;
+            }
+            while (start >= 0 && s.charAt(start) != ' ') {
+                start--;
+            }
+            if (start != end) {
+                result.append(s, start + 1, end + 1).append(' ');
+            }
+            end = start;
+        }
+        return result.toString();
+    }
 }
