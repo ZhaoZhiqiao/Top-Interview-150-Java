@@ -278,9 +278,8 @@ public class TopInterview150Part1 {
         return Arrays.stream(candies).sum();
     }
 
-
     /**
-     * 42.  接雨水
+     * 42. 接雨水
      */
     public int trap(int[] height) {
         int[] left = new int[height.length];
@@ -306,5 +305,31 @@ public class TopInterview150Part1 {
         }
 
         return count;
+    }
+
+    /**
+     * 13. 罗马数字转整数
+     */
+    public int romanToInt(String s) {
+        Map<Character, Integer> dict = Map.of(
+                'I', 1,
+                'V', 5,
+                'X', 10,
+                'L', 50,
+                'C', 100,
+                'D', 500,
+                'M', 1000
+        );
+        char[] words = s.toCharArray();
+        int num = 0;
+        for (int i = 0; i < words.length - 1; i++) {
+            if (dict.get(words[i]) < dict.get(words[i + 1])) {
+                num -= dict.get(words[i]);
+            } else {
+                num += dict.get(words[i]);
+            }
+        }
+        num += dict.get(words[words.length - 1]);
+        return num;
     }
 }

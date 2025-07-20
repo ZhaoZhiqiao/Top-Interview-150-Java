@@ -32,7 +32,8 @@ public class TestRunner {
 //        testProductExceptSelf(solution);
 //        testCanCompleteCircuit(solution);
 //        testCandy(solution);
-        testTrap(solution);
+//        testTrap(solution);
+        testRomanToInt(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -194,6 +195,15 @@ public class TestRunner {
         int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         int result = solution.trap(height);
         SimpleTest.testReturnWithArray("135. 接雨水", result, height);
+    }
+
+    /**
+     * 测试 13. 罗马数字转整数
+     */
+    private static void testRomanToInt(TopInterview150Part1 solution) {
+        String romanNumber = "III";
+        int result = solution.romanToInt(romanNumber);
+        SimpleTest.testReturn("135. 接雨水", result, romanNumber);
     }
 
 }
