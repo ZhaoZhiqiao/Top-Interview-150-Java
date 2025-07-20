@@ -35,7 +35,8 @@ public class TestRunner {
 //        testTrap(solution);
 //        testRomanToInt(solution);
 //        testTntToRoman(solution);
-        testLengthOfLastWord(solution);
+//        testLengthOfLastWord(solution);
+        testLongestCommonPrefix(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -224,5 +225,14 @@ public class TestRunner {
         String string = "   fly me   to   the moon  ";
         int result = solution.lengthOfLastWord(string);
         SimpleTest.testReturn("58. 最后一个单词的长度", result, string);
+    }
+
+    /**
+     * 测试 14. 最长公共前缀
+     */
+    private static void testLongestCommonPrefix(TopInterview150Part1 solution) {
+        String[] strings = {"flower", "flow", "flight"};
+        String result = solution.longestCommonPrefix(strings);
+        SimpleTest.testReturnWithArray("14. 最长公共前缀", result, strings);
     }
 }
