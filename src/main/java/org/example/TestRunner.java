@@ -30,7 +30,8 @@ public class TestRunner {
 //        testHIndex(solution);
 //        testRandomizedSet(solution);
 //        testProductExceptSelf(solution);
-        testCanCompleteCircuit(solution);
+//        testCanCompleteCircuit(solution);
+        testCandy(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -166,13 +167,23 @@ public class TestRunner {
     }
 
     /**
-     * 测试 134.  加油站
+     * 测试 134. 加油站
      */
     private static void testCanCompleteCircuit(TopInterview150Part1 solution) {
         int[] gas = {1, 2, 3, 4, 5};
         int[] cost = {3, 4, 5, 1, 2};
         int result = solution.canCompleteCircuit(gas, cost);
         SimpleTest.testReturnWithArrays("134. 加油站", result, gas, cost);
+    }
+
+
+    /**
+     * 测试 135. 分发糖果
+     */
+    private static void testCandy(TopInterview150Part1 solution) {
+        int[] ratings = {1, 2, 2};
+        int result = solution.candy(ratings);
+        SimpleTest.testReturn("135. 分发糖果", result);
     }
 
 }

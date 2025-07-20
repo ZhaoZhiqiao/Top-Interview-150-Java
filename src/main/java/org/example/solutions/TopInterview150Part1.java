@@ -173,6 +173,67 @@ public class TopInterview150Part1 {
     }
 
     /**
+     * 238. 除自身以外数组的乘积
+     */
+    public int[] productExceptSelf(int[] nums) {
+        int[] result = Arrays.copyOf(nums, nums.length);
+        for (int i = 0, left = 1; i < nums.length; i++) {
+            result[i] = left;
+            left *= nums[i];
+        }
+        for (int i = nums.length - 1, right = 1; i >= 0; i--) {
+            result[i] *= right;
+            right *= nums[i];
+        }
+        return result;
+    }
+
+    /**
+     * 134.  加油站
+     */
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        for (int i = 0; i < gas.length; ) {
+            int total = 0;
+            int cnt = 0;
+            while (cnt < gas.length) {
+                int index = (i + cnt) % gas.length;
+                total += gas[index] - cost[index];
+                if (total < 0) {
+                    break;
+                }
+                cnt++;
+            }
+            if (cnt == gas.length) {
+                return i;
+            } else {
+                i = i + cnt + 1;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 135.  分发糖果
+     */
+    public int candy(int[] ratings) {
+        int[] candies = new int[ratings.length];
+        candies[0] = 1;
+        for (int i = 1; i < ratings.length; i++) {
+            if (ratings[i] > ratings[i - 1]) {
+                candies[i] = candies[i - 1] + 1;
+            } else {
+                candies[i] = 1;
+            }
+        }
+        for (int i = ratings.length - 2; i >= 0; i--) {
+            if (ratings[i] > ratings[i + 1] && candies[i] <= candies[i + 1]) {
+                candies[i] = candies[i + 1] + 1;
+            }
+        }
+        return Arrays.stream(candies).sum();
+    }
+
+    /**
      * 380. O(1) 时间插入、删除和获取随机元素
      */
     @SuppressWarnings("InnerClassMayBeStatic")
@@ -217,44 +278,4 @@ public class TopInterview150Part1 {
         }
     }
 
-    /**
-     * 238. 除自身以外数组的乘积
-     */
-    public int[] productExceptSelf(int[] nums) {
-        int[] result = Arrays.copyOf(nums, nums.length);
-        for (int i = 0, left = 1; i < nums.length; i++) {
-            result[i] = left;
-            left *= nums[i];
-        }
-        for (int i = nums.length - 1, right = 1; i >= 0; i--) {
-            result[i] *= right;
-            right *= nums[i];
-        }
-        return result;
-    }
-
-
-    /**
-     * 134.  加油站
-     */
-    public int canCompleteCircuit(int[] gas, int[] cost) {
-        for (int i = 0; i < gas.length; ) {
-            int total = 0;
-            int cnt = 0;
-            while (cnt < gas.length) {
-                int index = (i + cnt) % gas.length;
-                total += gas[index] - cost[index];
-                if (total < 0) {
-                    break;
-                }
-                cnt++;
-            }
-            if (cnt == gas.length) {
-                return i;
-            } else {
-                i = i + cnt + 1;
-            }
-        }
-        return -1;
-    }
 }
