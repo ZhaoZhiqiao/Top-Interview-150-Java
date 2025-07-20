@@ -33,7 +33,8 @@ public class TestRunner {
 //        testCanCompleteCircuit(solution);
 //        testCandy(solution);
 //        testTrap(solution);
-        testRomanToInt(solution);
+//        testRomanToInt(solution);
+        testTntToRoman(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -203,7 +204,16 @@ public class TestRunner {
     private static void testRomanToInt(TopInterview150Part1 solution) {
         String romanNumber = "III";
         int result = solution.romanToInt(romanNumber);
-        SimpleTest.testReturn("135. 接雨水", result, romanNumber);
+        SimpleTest.testReturn("13. 罗马数字转整数", result, romanNumber);
+    }
+
+    /**
+     * 测试 12. 整数转罗马数字
+     */
+    private static void testTntToRoman(TopInterview150Part1 solution) {
+        int num = 1994;
+        String result = solution.intToRoman(num);
+        SimpleTest.testReturn("12. 整数转罗马数字", result, num);
     }
 
 }
