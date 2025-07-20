@@ -51,7 +51,7 @@ Top-Interview-150-Java/
 - [x] 除自身以外数组的乘积 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 加油站 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 分发糖果 ![困难](https://img.shields.io/badge/-困难-red)
-- [ ] 接雨水 ![困难](https://img.shields.io/badge/-困难-red)
+- [x] 接雨水 ![困难](https://img.shields.io/badge/-困难-red)
 - [ ] 罗马数字转整数 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 整数转罗马数字 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 最后一个单词的长度 ![简单](https://img.shields.io/badge/-简单-green)
@@ -235,10 +235,10 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-15%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-16%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-5%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-9%2F77-orange)
-![Hard](https://img.shields.io/badge/困难-1%2F34-red)
+![Hard](https://img.shields.io/badge/困难-2%2F34-red)
 
 ---
 

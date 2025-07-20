@@ -173,6 +173,51 @@ public class TopInterview150Part1 {
     }
 
     /**
+     * 380. O(1) 时间插入、删除和获取随机元素
+     */
+    @SuppressWarnings("InnerClassMayBeStatic")
+    public class RandomizedSet {
+        HashMap<Integer, Integer> map;
+        List<Integer> list;
+        Random random;
+
+        public RandomizedSet() {
+            map = new HashMap<>();
+            list = new ArrayList<>();
+            random = new Random();
+        }
+
+        public boolean insert(int val) {
+            if (map.containsKey(val)) {
+                return false;
+            } else {
+                list.add(val);
+                map.put(val, list.size() - 1);
+                return true;
+            }
+        }
+
+        public boolean remove(int val) {
+            if (!map.containsKey(val)) {
+                return false;
+            } else {
+                Integer index = map.get(val);
+                Integer LastElement = list.getLast();
+                list.set(index, LastElement);
+                map.put(LastElement, index);
+                list.removeLast();
+                map.remove(val);
+                return true;
+            }
+        }
+
+        public int getRandom() {
+            int index = random.nextInt(list.size());
+            return list.get(index);
+        }
+    }
+
+    /**
      * 238. 除自身以外数组的乘积
      */
     public int[] productExceptSelf(int[] nums) {
@@ -233,49 +278,33 @@ public class TopInterview150Part1 {
         return Arrays.stream(candies).sum();
     }
 
+
     /**
-     * 380. O(1) 时间插入、删除和获取随机元素
+     * 42.  接雨水
      */
-    @SuppressWarnings("InnerClassMayBeStatic")
-    public class RandomizedSet {
-        HashMap<Integer, Integer> map;
-        List<Integer> list;
-        Random random;
-
-        public RandomizedSet() {
-            map = new HashMap<>();
-            list = new ArrayList<>();
-            random = new Random();
+    public int trap(int[] height) {
+        int[] left = new int[height.length];
+        int[] right = new int[height.length];
+        int max = height[0];
+        for (int i = 1; i < left.length; i++) {
+            left[i] = max;
+            max = Math.max(max, height[i]);
         }
 
-        public boolean insert(int val) {
-            if (map.containsKey(val)) {
-                return false;
-            } else {
-                list.add(val);
-                map.put(val, list.size() - 1);
-                return true;
+        max = height[height.length - 1];
+        for (int i = right.length - 2; i >= 0; i--) {
+            right[i] = max;
+            max = Math.max(max, height[i]);
+        }
+
+        int count = 0;
+        for (int i = 1; i < height.length - 1; i++) {
+            int capacity = (Math.min(left[i], right[i]) - height[i]);
+            if (capacity > 0) {
+                count += capacity;
             }
         }
 
-        public boolean remove(int val) {
-            if (!map.containsKey(val)) {
-                return false;
-            } else {
-                Integer index = map.get(val);
-                Integer LastElement = list.getLast();
-                list.set(index, LastElement);
-                map.put(LastElement, index);
-                list.removeLast();
-                map.remove(val);
-                return true;
-            }
-        }
-
-        public int getRandom() {
-            int index = random.nextInt(list.size());
-            return list.get(index);
-        }
+        return count;
     }
-
 }

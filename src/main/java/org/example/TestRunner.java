@@ -31,7 +31,8 @@ public class TestRunner {
 //        testRandomizedSet(solution);
 //        testProductExceptSelf(solution);
 //        testCanCompleteCircuit(solution);
-        testCandy(solution);
+//        testCandy(solution);
+        testTrap(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -183,7 +184,16 @@ public class TestRunner {
     private static void testCandy(TopInterview150Part1 solution) {
         int[] ratings = {1, 2, 2};
         int result = solution.candy(ratings);
-        SimpleTest.testReturn("135. 分发糖果", result);
+        SimpleTest.testReturnWithArray("135. 分发糖果", result, ratings);
+    }
+
+    /**
+     * 测试 42.  接雨水
+     */
+    private static void testTrap(TopInterview150Part1 solution) {
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        int result = solution.trap(height);
+        SimpleTest.testReturnWithArray("135. 接雨水", result, height);
     }
 
 }
