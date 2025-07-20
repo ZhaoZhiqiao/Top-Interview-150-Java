@@ -57,7 +57,7 @@ Top-Interview-150-Java/
 - [x] 最后一个单词的长度 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 最长公共前缀 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 反转字符串中的单词 ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] Z 字形变换 ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] Z字形变换 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 找出字符串中第一个匹配项的下标 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 文本左右对齐 ![困难](https://img.shields.io/badge/-困难-red)
 
@@ -235,9 +235,9 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-21%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-22%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-8%2F39-green)
-![Medium](https://img.shields.io/badge/中等-11%2F77-orange)
+![Medium](https://img.shields.io/badge/中等-12%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-2%2F34-red)
 
 ---

@@ -412,4 +412,20 @@ public class TopInterview150Part1 {
         }
         return result.toString();
     }
+
+    /**
+     * 6. Z字形变换
+     */
+    public String convert(String s, int numRows) {
+        int rowNums = numRows == 1 ? 1 : numRows * 2 - 2;
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < s.length(); j++) {
+                if (j % rowNums == i || j % rowNums == rowNums - i) {
+                    res.append(s.charAt(j));
+                }
+            }
+        }
+        return res.toString();
+    }
 }

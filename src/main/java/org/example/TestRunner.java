@@ -37,7 +37,8 @@ public class TestRunner {
 //        testTntToRoman(solution);
 //        testLengthOfLastWord(solution);
 //        testLongestCommonPrefix(solution);
-        testReverseWords(solution);
+//        testReverseWords(solution);
+        testConvert(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -238,11 +239,21 @@ public class TestRunner {
     }
 
     /**
-     * 151. 反转字符串中的单词
+     * 测试 151. 反转字符串中的单词
      */
     private static void testReverseWords(TopInterview150Part1 solution) {
         String s = "the sky is blue";
         String result = solution.reverseWords(s);
         SimpleTest.testReturn("151. 反转字符串中的单词", result, s);
+    }
+
+    /**
+     * 测试 6. Z字形变换
+     */
+    private static void testConvert(TopInterview150Part1 solution) {
+        String s = "PAYPALISHIRING";
+        int numRows = 3;
+        String result = solution.convert(s, numRows);
+        SimpleTest.testReturn("6. Z字形变换", result, s, numRows);
     }
 }
