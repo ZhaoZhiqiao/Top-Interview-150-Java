@@ -68,6 +68,23 @@ public class SimpleTest {
     }
 
     /**
+     * 🎯 数组与其他数组的测试方法 - 避免varargs混淆
+     *
+     * @param title            测试标题
+     * @param result           返回值
+     * @param arrayInput       第一个数组输入参数
+     * @param otherArrayInput  第二个数组输入参数
+     */
+    public static void testReturnWithArrays(String title, Object result, Object arrayInput, Object otherArrayInput) {
+        System.out.println("\n🧪 " + title);
+        System.out.println("输入:");
+        System.out.println("  参数1: " + formatObject(arrayInput));
+        System.out.println("  参数2: " + formatObject(otherArrayInput));
+        System.out.println("返回: " + formatObject(result));
+    }
+
+
+    /**
      * 🔄 原地修改测试 - 支持任意类型的原地修改
      *
      * @param title       测试标题

@@ -29,7 +29,8 @@ public class TestRunner {
 //        testJump(solution);
 //        testHIndex(solution);
 //        testRandomizedSet(solution);
-        testProductExceptSelf(solution);
+//        testProductExceptSelf(solution);
+        testCanCompleteCircuit(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -164,5 +165,14 @@ public class TestRunner {
         SimpleTest.testInPlace("238. 除自身以外数组的乘积", original, result);
     }
 
+    /**
+     * 测试 134.  加油站
+     */
+    private static void testCanCompleteCircuit(TopInterview150Part1 solution) {
+        int[] gas = {1, 2, 3, 4, 5};
+        int[] cost = {3, 4, 5, 1, 2};
+        int result = solution.canCompleteCircuit(gas, cost);
+        SimpleTest.testReturnWithArrays("134. 加油站", result, gas, cost);
+    }
 
 }
