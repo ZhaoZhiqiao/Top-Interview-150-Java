@@ -28,7 +28,8 @@ public class TestRunner {
 //        testCanJump(solution);
 //        testJump(solution);
 //        testHIndex(solution);
-        testRandomizedSet(solution);
+//        testRandomizedSet(solution);
+        testProductExceptSelf(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -138,7 +139,7 @@ public class TestRunner {
     }
 
     /**
-     * 380. O(1) 时间插入、删除和获取随机元素
+     * 测试 380. O(1) 时间插入、删除和获取随机元素
      */
     private static void testRandomizedSet(TopInterview150Part1 solution) {
         TopInterview150Part1.RandomizedSet randomizedSet = solution.new RandomizedSet();
@@ -153,6 +154,15 @@ public class TestRunner {
         SimpleTest.testReturn("380. O(1) 时间插入、删除和获取随机元素", result);
     }
 
+    /**
+     * 测试 238. 除自身以外数组的乘积
+     */
+    private static void testProductExceptSelf(TopInterview150Part1 solution) {
+        int[] nums = {1, 2, 3, 4};
+        int[] original = SimpleTest.copy(nums);
+        int[] result = solution.productExceptSelf(nums);
+        SimpleTest.testInPlace("238. 除自身以外数组的乘积", original, result);
+    }
 
 
 }
