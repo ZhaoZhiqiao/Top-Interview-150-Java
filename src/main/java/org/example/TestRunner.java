@@ -34,7 +34,8 @@ public class TestRunner {
 //        testCandy(solution);
 //        testTrap(solution);
 //        testRomanToInt(solution);
-        testTntToRoman(solution);
+//        testTntToRoman(solution);
+        testLengthOfLastWord(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -216,4 +217,12 @@ public class TestRunner {
         SimpleTest.testReturn("12. 整数转罗马数字", result, num);
     }
 
+    /**
+     * 测试 58. 最后一个单词的长度
+     */
+    private static void testLengthOfLastWord(TopInterview150Part1 solution) {
+        String string = "   fly me   to   the moon  ";
+        int result = solution.lengthOfLastWord(string);
+        SimpleTest.testReturn("58. 最后一个单词的长度", result, string);
+    }
 }

@@ -353,4 +353,20 @@ public class TopInterview150Part1 {
         }
         return roman.toString();
     }
+
+    /**
+     * 58. 最后一个单词的长度
+     */
+    public int lengthOfLastWord(String s) {
+        char[] chars = s.toCharArray();
+        int end = chars.length - 1;
+        while (end >= 0 && chars[end] == ' ') {
+            end--;
+        }
+        int start = end;
+        while (start >= 0 && chars[start] != ' ') {
+            start--;
+        }
+        return end - start;
+    }
 }
