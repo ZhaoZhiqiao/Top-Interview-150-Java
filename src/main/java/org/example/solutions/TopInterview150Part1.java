@@ -470,4 +470,54 @@ public class TopInterview150Part1 {
         }
         return next;
     }
+
+    /**
+     * 68. 文本左右对齐
+     */
+    public List<String> fullJustify(String[] words, int maxWidth) {
+        List<String> result = new ArrayList<>();
+        StringBuilder currentWord = new StringBuilder();
+        int start = 0, end = 0;
+        while (end < words.length) {
+            start = end;
+            int length = 0;
+            while (end < words.length && length + words[end].length() + 1 < maxWidth) {
+                length = length + words[end].length() + 1;
+                end++;
+            }
+            if(end < words.length && length + words[end].length() <= maxWidth){
+                length = length + words[end].length();
+                end++;
+            }else {
+                length -= 1;
+            }
+            int space = maxWidth - length + ((end - start) - 1);
+            int repeat = (end - start) == 1 ? space : space / ((end - start) - 1);
+            int diff = (end - start) == 1 ? 0 : space % ((end - start) - 1);
+            for (int i = start; i < end; i++) {
+                currentWord.append(words[i]);
+                currentWord.append(" ".repeat(diff > 0 ? repeat + 1: repeat));
+                diff -= 1;
+            }
+            if (currentWord.length() > maxWidth) {
+                currentWord.delete(maxWidth, currentWord.length());
+            }
+            result.add(currentWord.toString());
+            currentWord.delete(0, currentWord.length());
+        }
+        if (end - start > 1) {
+            result.removeLast();
+            for (int i = start; i < end; i++) {
+                currentWord.append(words[i]);
+                currentWord.append(" ");
+            }
+            if(currentWord.length() > maxWidth){
+                currentWord.delete(maxWidth, currentWord.length());
+            }else {
+                currentWord.append(" ".repeat(maxWidth - currentWord.length()));
+            }
+            result.add(currentWord.toString());
+        }
+        return result;
+    }
 }

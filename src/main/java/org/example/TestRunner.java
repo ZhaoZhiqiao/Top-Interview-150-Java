@@ -3,6 +3,8 @@ package org.example;
 import org.example.solutions.TopInterview150Part1;
 import org.example.utils.SimpleTest;
 
+import java.util.List;
+
 /**
  * 简单测试运行器 - 一次测试一个题目
  * 使用方法：
@@ -39,7 +41,8 @@ public class TestRunner {
 //        testLongestCommonPrefix(solution);
 //        testReverseWords(solution);
 //        testConvert(solution);
-        testStrStr(solution);
+//        testStrStr(solution);
+        testFullJustify(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -266,5 +269,15 @@ public class TestRunner {
         String needle = "ABABC";
         int result = solution.strStr(haystack, needle);
         SimpleTest.testReturn("28. 找出字符串中第一个匹配项的下标", result, haystack, needle);
+    }
+
+    /**
+     * 测试 68. 文本左右对齐
+     */
+    private static void testFullJustify(TopInterview150Part1 solution) {
+        String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
+        int maxWidth = 16;
+        List<String> result = solution.fullJustify(words, maxWidth);
+        SimpleTest.testReturnWithArray("68. 文本左右对齐", result, words, maxWidth);
     }
 }
