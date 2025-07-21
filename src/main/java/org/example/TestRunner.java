@@ -38,7 +38,8 @@ public class TestRunner {
 //        testLengthOfLastWord(solution);
 //        testLongestCommonPrefix(solution);
 //        testReverseWords(solution);
-        testConvert(solution);
+//        testConvert(solution);
+        testStrStr(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -255,5 +256,15 @@ public class TestRunner {
         int numRows = 3;
         String result = solution.convert(s, numRows);
         SimpleTest.testReturn("6. Z字形变换", result, s, numRows);
+    }
+
+    /**
+     * 测试 28. 找出字符串中第一个匹配项的下标
+     */
+    private static void testStrStr(TopInterview150Part1 solution) {
+        String haystack = "ABABABABCA";
+        String needle = "ABABC";
+        int result = solution.strStr(haystack, needle);
+        SimpleTest.testReturn("28. 找出字符串中第一个匹配项的下标", result, haystack, needle);
     }
 }

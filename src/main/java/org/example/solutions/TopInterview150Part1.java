@@ -428,4 +428,46 @@ public class TopInterview150Part1 {
         }
         return res.toString();
     }
+
+    /**
+     * 28. 找出字符串中第一个匹配项的下标
+     */
+    public int strStr(String haystack, String needle) {
+        int[] next = build_next(needle);
+        int i = 0, j = 0;
+        while (i < haystack.length() && j < needle.length()) {
+            if (haystack.charAt(i) == needle.charAt(j)) {
+                j++;
+                i++;
+            } else if (j > 0) {
+                j = next[j - 1];
+            } else {
+                i++;
+            }
+            if (j == needle.length()) {
+                return i - j;
+            }
+        }
+        return -1;
+    }
+
+    private int[] build_next(String s) {
+        int[] next = new int[s.length()];
+        next[0] = 0;
+        int patternLength = 0;
+        int i = 1;
+        while (i < s.length()) {
+            if (s.charAt(i) == s.charAt(patternLength)) {
+                patternLength++;
+                next[i] = patternLength;
+                i++;
+            } else if (patternLength > 0) {
+                patternLength = next[patternLength - 1];
+            } else {
+                next[i] = 0;
+                i++;
+            }
+        }
+        return next;
+    }
 }
