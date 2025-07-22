@@ -542,4 +542,22 @@ public class TopInterview150Part1 {
         }
         return true;
     }
+
+    /**
+     * 392. 判断子序列
+     */
+    public boolean isSubsequence(String s, String t) {
+        int sIndex = 0;
+        for (int tIndex = 0; tIndex < t.length() && sIndex < s.length(); tIndex++) {
+            char currentChar = t.charAt(tIndex);
+            if (s.charAt(sIndex) == currentChar) {
+                sIndex++;
+            }
+            if (sIndex == s.length()) {
+                break;
+            }
+        }
+        return sIndex == s.length();
+    }
+
 }

@@ -43,7 +43,8 @@ public class TestRunner {
 //        testConvert(solution);
 //        testStrStr(solution);
 //        testFullJustify(solution);
-        testIsPalindrome(solution);
+//        testIsPalindrome(solution);
+        testIsSubsequence(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -289,5 +290,15 @@ public class TestRunner {
         String s = "A man, a plan, a canal: Panama";
         boolean result = solution.isPalindrome(s);
         SimpleTest.testReturn("125. 验证回文串", result, s);
+    }
+
+    /**
+     * 测试 392. 判断子序列
+     */
+    private static void testIsSubsequence(TopInterview150Part1 solution) {
+        String s = "";
+        String t = "ahbgdc";
+        boolean result = solution.isSubsequence(s, t);
+        SimpleTest.testReturn("392. 判断子序列", result, s, t);
     }
 }
