@@ -560,4 +560,22 @@ public class TopInterview150Part1 {
         return sIndex == s.length();
     }
 
+    /**
+     * 167. 两数之和 II - 输入有序数组
+     */
+    public int[] twoSum(int[] numbers, int target) {
+        int slow = 0, fast = numbers.length - 1;
+        while (slow < fast) {
+            int sum = numbers[slow] + numbers[fast];
+            if (sum == target) {
+                return new int[]{slow + 1, fast + 1};
+            } else if (sum < target) {
+                slow++;
+            } else {
+                fast--;
+            }
+        }
+        return numbers;
+    }
+
 }

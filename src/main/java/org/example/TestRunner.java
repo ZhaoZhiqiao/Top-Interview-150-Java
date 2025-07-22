@@ -44,7 +44,8 @@ public class TestRunner {
 //        testStrStr(solution);
 //        testFullJustify(solution);
 //        testIsPalindrome(solution);
-        testIsSubsequence(solution);
+//        testIsSubsequence(solution);
+        testTwoSum(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -301,4 +302,15 @@ public class TestRunner {
         boolean result = solution.isSubsequence(s, t);
         SimpleTest.testReturn("392. 判断子序列", result, s, t);
     }
+
+    /**
+     * 测试 167. 两数之和 II - 输入有序数组
+     */
+    private static void testTwoSum(TopInterview150Part1 solution) {
+        int[] numbers = {2, 7, 11, 15};
+        int target = 9;
+        int[] result = solution.twoSum(numbers, target);
+        SimpleTest.testReturnWithArray("167. 两数之和 II - 输入有序数组", result, numbers, target);
+    }
+
 }
