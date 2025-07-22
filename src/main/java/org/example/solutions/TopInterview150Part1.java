@@ -485,10 +485,10 @@ public class TopInterview150Part1 {
                 length = length + words[end].length() + 1;
                 end++;
             }
-            if(end < words.length && length + words[end].length() <= maxWidth){
+            if (end < words.length && length + words[end].length() <= maxWidth) {
                 length = length + words[end].length();
                 end++;
-            }else {
+            } else {
                 length -= 1;
             }
             int space = maxWidth - length + ((end - start) - 1);
@@ -496,7 +496,7 @@ public class TopInterview150Part1 {
             int diff = (end - start) == 1 ? 0 : space % ((end - start) - 1);
             for (int i = start; i < end; i++) {
                 currentWord.append(words[i]);
-                currentWord.append(" ".repeat(diff > 0 ? repeat + 1: repeat));
+                currentWord.append(" ".repeat(diff > 0 ? repeat + 1 : repeat));
                 diff -= 1;
             }
             if (currentWord.length() > maxWidth) {
@@ -511,13 +511,35 @@ public class TopInterview150Part1 {
                 currentWord.append(words[i]);
                 currentWord.append(" ");
             }
-            if(currentWord.length() > maxWidth){
+            if (currentWord.length() > maxWidth) {
                 currentWord.delete(maxWidth, currentWord.length());
-            }else {
+            } else {
                 currentWord.append(" ".repeat(maxWidth - currentWord.length()));
             }
             result.add(currentWord.toString());
         }
         return result;
+    }
+
+    /**
+     * 125. 验证回文串
+     */
+    public boolean isPalindrome(String s) {
+        int start = 0, end = s.length() - 1;
+        while (start < end) {
+            while (!Character.isLetterOrDigit(s.charAt(start)) && start != end) {
+                start++;
+            }
+            while (!Character.isLetterOrDigit(s.charAt(end)) && start != end) {
+                end--;
+            }
+            if (Character.toLowerCase(s.charAt(start)) == Character.toLowerCase(s.charAt(end))) {
+                start++;
+                end--;
+            } else {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -42,7 +42,8 @@ public class TestRunner {
 //        testReverseWords(solution);
 //        testConvert(solution);
 //        testStrStr(solution);
-        testFullJustify(solution);
+//        testFullJustify(solution);
+        testIsPalindrome(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -279,5 +280,14 @@ public class TestRunner {
         int maxWidth = 16;
         List<String> result = solution.fullJustify(words, maxWidth);
         SimpleTest.testReturnWithArray("68. 文本左右对齐", result, words, maxWidth);
+    }
+
+    /**
+     * 测试 125. 验证回文串
+     */
+    private static void testIsPalindrome(TopInterview150Part1 solution) {
+        String s = "A man, a plan, a canal: Panama";
+        boolean result = solution.isPalindrome(s);
+        SimpleTest.testReturn("125. 验证回文串", result, s);
     }
 }

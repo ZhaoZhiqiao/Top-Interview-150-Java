@@ -62,7 +62,7 @@ Top-Interview-150-Java/
 - [x] 文本左右对齐 ![困难](https://img.shields.io/badge/-困难-red)
 
 ### 🎯 双指针
-- [ ] 验证回文串 ![简单](https://img.shields.io/badge/-简单-green)
+- [x] 验证回文串 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 判断子序列 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 两数之和 II - 输入有序数组 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 盛最多水的容器 ![中等](https://img.shields.io/badge/-中等-orange)
@@ -235,8 +235,8 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-24%2F150-red)
-![Easy](https://img.shields.io/badge/简单-9%2F39-green)
+![Progress](https://img.shields.io/badge/完成进度-25%2F150-red)
+![Easy](https://img.shields.io/badge/简单-10%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-12%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-3%2F34-red)
 
