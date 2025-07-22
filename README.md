@@ -66,7 +66,7 @@ Top-Interview-150-Java/
 - [x] 判断子序列 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 两数之和 II - 输入有序数组 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 盛最多水的容器 ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] 三数之和 ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] 三数之和 ![中等](https://img.shields.io/badge/-中等-orange)
 
 ### 🪟 滑动窗口
 - [ ] 长度最小的子数组 ![中等](https://img.shields.io/badge/-中等-orange)

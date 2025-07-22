@@ -46,7 +46,8 @@ public class TestRunner {
 //        testIsPalindrome(solution);
 //        testIsSubsequence(solution);
 //        testTwoSum(solution);
-        testMaxArea(solution);
+//        testMaxArea(solution);
+        testThreeSum(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -323,4 +324,12 @@ public class TestRunner {
         SimpleTest.testReturnWithArray("11. 盛最多水的容器", result, height);
     }
 
+    /**
+     * 测试 15. 三数之和
+     */
+    private static void testThreeSum(TopInterview150Part1 solution) {
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        List<List<Integer>> result = solution.threeSum(nums);
+        SimpleTest.testReturnWithArray("15. 三数之和", result, nums);
+    }
 }
