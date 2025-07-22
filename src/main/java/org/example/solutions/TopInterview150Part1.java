@@ -311,15 +311,7 @@ public class TopInterview150Part1 {
      * 13. 罗马数字转整数
      */
     public int romanToInt(String s) {
-        Map<Character, Integer> dict = Map.of(
-                'I', 1,
-                'V', 5,
-                'X', 10,
-                'L', 50,
-                'C', 100,
-                'D', 500,
-                'M', 1000
-        );
+        Map<Character, Integer> dict = Map.of('I', 1, 'V', 5, 'X', 10, 'L', 50, 'C', 100, 'D', 500, 'M', 1000);
         char[] words = s.toCharArray();
         int num = 0;
         for (int i = 0; i < words.length - 1; i++) {
@@ -578,4 +570,20 @@ public class TopInterview150Part1 {
         return numbers;
     }
 
+    /**
+     * 11. 盛最多水的容器
+     */
+    public int maxArea(int[] height) {
+        int maxCapacity = 0, left = 0, right = height.length - 1;
+        while (left < right) {
+            int capacity = Math.min(height[left], height[right]) * (right - left);
+            maxCapacity = Math.max(maxCapacity, capacity);
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return maxCapacity;
+    }
 }

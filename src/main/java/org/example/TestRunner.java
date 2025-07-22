@@ -45,7 +45,8 @@ public class TestRunner {
 //        testFullJustify(solution);
 //        testIsPalindrome(solution);
 //        testIsSubsequence(solution);
-        testTwoSum(solution);
+//        testTwoSum(solution);
+        testMaxArea(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -311,6 +312,15 @@ public class TestRunner {
         int target = 9;
         int[] result = solution.twoSum(numbers, target);
         SimpleTest.testReturnWithArray("167. 两数之和 II - 输入有序数组", result, numbers, target);
+    }
+
+    /**
+     * 测试 11. 盛最多水的容器
+     */
+    private static void testMaxArea(TopInterview150Part1 solution) {
+        int[] height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+        int result = solution.maxArea(height);
+        SimpleTest.testReturnWithArray("11. 盛最多水的容器", result, height);
     }
 
 }
