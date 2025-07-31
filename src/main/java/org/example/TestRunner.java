@@ -47,7 +47,8 @@ public class TestRunner {
 //        testIsSubsequence(solution);
 //        testTwoSum(solution);
 //        testMaxArea(solution);
-        testThreeSum(solution);
+//        testThreeSum(solution);
+        testMinSubArrayLen(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -331,5 +332,16 @@ public class TestRunner {
         int[] nums = {-1, 0, 1, 2, -1, -4};
         List<List<Integer>> result = solution.threeSum(nums);
         SimpleTest.testReturnWithArray("15. 三数之和", result, nums);
+    }
+
+
+    /**
+     * 测试 209. 长度最小的子数组
+     */
+    private static void testMinSubArrayLen(TopInterview150Part1 solution) {
+        int target = 11;
+        int[] nums = {1, 1, 1, 1, 1, 1, 1, 1};
+        int result = solution.minSubArrayLen(target, nums);
+        SimpleTest.testReturnWithArray("209. 长度最小的子数组", result, nums, target);
     }
 }
