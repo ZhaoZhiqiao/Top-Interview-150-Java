@@ -631,4 +631,20 @@ public class TopInterview150Part1 {
         return minLength == Integer.MAX_VALUE ? 0 : minLength;
     }
 
+    /**
+     * 3. 无重复字符的最长子串
+     */
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character> set = new HashSet<>();
+        int right = 0, left = 0, maxLength = 0;
+        while (right < s.length()) {
+            while (set.contains(s.charAt(right))) {
+                set.remove(s.charAt(left++));
+            }
+            set.add(s.charAt(right));
+            maxLength = Math.max(maxLength, right - left + 1);
+            right++;
+        }
+        return maxLength;
+    }
 }

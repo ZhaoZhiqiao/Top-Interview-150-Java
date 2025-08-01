@@ -48,7 +48,8 @@ public class TestRunner {
 //        testTwoSum(solution);
 //        testMaxArea(solution);
 //        testThreeSum(solution);
-        testMinSubArrayLen(solution);
+//        testMinSubArrayLen(solution);
+        testLengthOfLongestSubstring(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -334,7 +335,6 @@ public class TestRunner {
         SimpleTest.testReturnWithArray("15. 三数之和", result, nums);
     }
 
-
     /**
      * 测试 209. 长度最小的子数组
      */
@@ -343,5 +343,14 @@ public class TestRunner {
         int[] nums = {1, 1, 1, 1, 1, 1, 1, 1};
         int result = solution.minSubArrayLen(target, nums);
         SimpleTest.testReturnWithArray("209. 长度最小的子数组", result, nums, target);
+    }
+
+    /**
+     * 测试 3. 无重复字符的最长子串
+     */
+    private static void testLengthOfLongestSubstring(TopInterview150Part1 solution) {
+        String s = "pwwkew";
+        int result = solution.lengthOfLongestSubstring(s);
+        SimpleTest.testReturn("3. 无重复字符的最长子串", result, s);
     }
 }
