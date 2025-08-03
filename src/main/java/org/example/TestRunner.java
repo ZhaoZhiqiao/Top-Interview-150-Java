@@ -49,7 +49,8 @@ public class TestRunner {
 //        testMaxArea(solution);
 //        testThreeSum(solution);
 //        testMinSubArrayLen(solution);
-        testLengthOfLongestSubstring(solution);
+//        testLengthOfLongestSubstring(solution);
+        testFindSubstring(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -352,5 +353,15 @@ public class TestRunner {
         String s = "pwwkew";
         int result = solution.lengthOfLongestSubstring(s);
         SimpleTest.testReturn("3. 无重复字符的最长子串", result, s);
+    }
+
+    /**
+     * 测试 30. 串联所有单词的子串
+     */
+    private static void testFindSubstring(TopInterview150Part1 solution) {
+        String s = "wordgoodgoodgoodbestword";
+        String[] words = {"word", "good", "best", "word"};
+        List<Integer> result = solution.findSubstring(s, words);
+        SimpleTest.testReturnWithArrays("30. 串联所有单词的子串", result, s, words);
     }
 }

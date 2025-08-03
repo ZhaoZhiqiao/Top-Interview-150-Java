@@ -71,7 +71,7 @@ Top-Interview-150-Java/
 ### 🪟 滑动窗口
 - [x] 长度最小的子数组 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 无重复字符的最长子串 ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] 串联所有单词的子串 ![困难](https://img.shields.io/badge/-困难-red)
+- [x] 串联所有单词的子串 ![困难](https://img.shields.io/badge/-困难-red)
 - [ ] 最小覆盖子串 ![困难](https://img.shields.io/badge/-困难-red)
 
 ### 🔢 矩阵
@@ -235,10 +235,10 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-31%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-32%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-11%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-17%2F77-orange)
-![Hard](https://img.shields.io/badge/困难-3%2F34-red)
+![Hard](https://img.shields.io/badge/困难-4%2F34-red)
 
 ---
 

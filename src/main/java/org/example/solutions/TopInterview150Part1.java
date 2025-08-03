@@ -647,4 +647,63 @@ public class TopInterview150Part1 {
         }
         return maxLength;
     }
+
+    /**
+     * 30. 串联所有单词的子串
+     */
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> result = new ArrayList<>();
+        if (words.length == 0) return result;
+
+        HashMap<String, Integer> allWords = new HashMap<>();
+        for (String word : words) {
+            allWords.put(word, allWords.getOrDefault(word, 0) + 1);
+        }
+        int wordLength = words[0].length();
+
+        for (int start = 0; start < wordLength; start++) {
+            HashMap<String, Integer> hasWords = new HashMap<>();
+            int num = 0;
+            for (int i = start; i < s.length() - wordLength * words.length + 1; i += wordLength) {
+                boolean hasRemoved = false;
+                while (num < words.length) {
+                    String word = s.substring(i + num * wordLength, i + (num + 1) * wordLength);
+                    if (allWords.containsKey(word)) {
+                        hasWords.put(word, hasWords.getOrDefault(word, 0) + 1);
+                        if (hasWords.get(word) > allWords.get(word)) {
+                            hasRemoved = true;
+                            int removeNum = 0;
+                            while (hasWords.get(word) > allWords.get(word)) {
+                                String currentWord = s.substring(i + removeNum * wordLength, i + (removeNum + 1) * wordLength);
+                                hasWords.put(currentWord, hasWords.get(currentWord) - 1);
+                                removeNum++;
+                            }
+                            num = num - removeNum + 1;
+                            i = i + (removeNum - 1) * wordLength;
+                            break;
+                        }
+                    } else {
+                        hasWords.clear();
+                        i += num * wordLength;
+                        num = 0;
+                        break;
+                    }
+                    num++;
+                }
+                if (num == words.length) {
+                    result.add(i);
+                }
+
+                if (num > 0 && !hasRemoved) {
+                    String firstWord = s.substring(i, i + wordLength);
+                    hasWords.put(firstWord, hasWords.get(firstWord) - 1);
+                    num = num - 1;
+                }
+
+            }
+
+        }
+
+        return result;
+    }
 }
