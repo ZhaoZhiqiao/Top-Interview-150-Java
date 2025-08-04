@@ -50,7 +50,8 @@ public class TestRunner {
 //        testThreeSum(solution);
 //        testMinSubArrayLen(solution);
 //        testLengthOfLongestSubstring(solution);
-        testFindSubstring(solution);
+//        testFindSubstring(solution);
+        testMinWindow(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -363,5 +364,15 @@ public class TestRunner {
         String[] words = {"word", "good", "best", "word"};
         List<Integer> result = solution.findSubstring(s, words);
         SimpleTest.testReturnWithArrays("30. 串联所有单词的子串", result, s, words);
+    }
+
+    /**
+     * 测试 76. 最小覆盖子串
+     */
+    private static void testMinWindow(TopInterview150Part1 solution) {
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
+        String result = solution.minWindow(s, t);
+        SimpleTest.testReturn("76. 最小覆盖子串", result, s, t);
     }
 }

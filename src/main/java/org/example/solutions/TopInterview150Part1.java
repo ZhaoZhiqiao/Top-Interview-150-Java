@@ -703,7 +703,48 @@ public class TopInterview150Part1 {
             }
 
         }
-
         return result;
+    }
+
+    /**
+     * 76. 最小覆盖子串
+     */
+    public String minWindow(String s, String t) {
+        int start = 0, end = 0, maxLen = Integer.MAX_VALUE;
+        int[] result = new int[2];
+        HashMap<Character, Integer> allChar = new HashMap<>();
+        for (Character ch : t.toCharArray()) {
+            allChar.put(ch, allChar.getOrDefault(ch, 0) + 1);
+        }
+
+        HashMap<Character, Integer> hasChar = new HashMap<>();
+
+        while (end < s.length()) {
+            if (allChar.containsKey(s.charAt(end))) {
+                hasChar.put(s.charAt(end), hasChar.getOrDefault(s.charAt(end), 0) + 1);
+            }
+            while (check(allChar, hasChar) && start <= end) {
+                if (maxLen > end - start + 1) {
+                    maxLen = end - start + 1;
+                    result[0] = start;
+                    result[1] = start + maxLen;
+                }
+                if (allChar.containsKey(s.charAt(start))) {
+                    hasChar.put(s.charAt(start), hasChar.get(s.charAt(start)) - 1);
+                }
+                start++;
+            }
+            end++;
+        }
+        return s.substring(result[0], result[1]);
+    }
+
+    public boolean check(HashMap<Character, Integer> allChar, HashMap<Character, Integer> hasChar) {
+        for (Character ch : allChar.keySet()) {
+            if (hasChar.getOrDefault(ch, 0) < allChar.get(ch)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
