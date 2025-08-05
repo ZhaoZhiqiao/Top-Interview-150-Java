@@ -53,7 +53,8 @@ public class TestRunner {
 //        testFindSubstring(solution);
 //        testMinWindow(solution);
 //        testIsValidSudoku(solution);
-        testSpiralOrder(solution);
+//        testSpiralOrder(solution);
+        testRotateImage(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -404,5 +405,14 @@ public class TestRunner {
         SimpleTest.testReturnWithArray("54. 螺旋矩阵", result, matrix);
     }
 
+    /**
+     * 测试 48. 旋转图像
+     */
+    private static void testRotateImage(TopInterview150Part1 solution) {
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] original = SimpleTest.copy(matrix);
+        solution.rotate(matrix);
+        SimpleTest.testInPlace("48. 旋转图像", original, matrix);
+    }
 
 }

@@ -785,28 +785,50 @@ public class TopInterview150Part1 {
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> result = new ArrayList<>();
         int left = 0, right = matrix[0].length - 1, top = 0, bottom = matrix.length - 1;
-        while(left <= right && top <= bottom) {
-            for(int i = left; i <= right; i++) {
+        while (left <= right && top <= bottom) {
+            for (int i = left; i <= right; i++) {
                 result.add(matrix[top][i]);
             }
             top++;
-            for(int i = top; i <= bottom; i++) {
+            for (int i = top; i <= bottom; i++) {
                 result.add(matrix[i][right]);
             }
             right--;
-            if(top <= bottom) {
-                for(int i = right; i >= left; i--) {
+            if (top <= bottom) {
+                for (int i = right; i >= left; i--) {
                     result.add(matrix[bottom][i]);
                 }
                 bottom--;
             }
-            if(left <= right) {
-                for(int i = bottom; i >= top; i--) {
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--) {
                     result.add(matrix[i][left]);
                 }
                 left++;
             }
         }
         return result;
+    }
+
+    /**
+     * 48. 旋转图像
+     */
+    public void rotate(int[][] matrix) {
+        for (int i = 0; i < matrix.length / 2; i++) {
+            for (int j = i; j < matrix[0].length - i - 1; j++) {
+                int current_i = i, current_j = j;
+                int lastPos = matrix[matrix.length - current_j - 1][current_i];
+                for (int k = 0; k < 3; k++) {
+                    int temp = matrix[current_i][current_j];
+                    matrix[current_i][current_j] = lastPos;
+                    lastPos = temp;
+
+                    temp = current_i;
+                    current_i = current_j;
+                    current_j = matrix.length - temp - 1;
+                }
+                matrix[current_i][current_j] = lastPos;
+            }
+        }
     }
 }
