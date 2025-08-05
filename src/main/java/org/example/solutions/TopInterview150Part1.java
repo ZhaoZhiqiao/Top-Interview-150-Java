@@ -831,4 +831,51 @@ public class TopInterview150Part1 {
             }
         }
     }
+
+    /**
+     * 73. 矩阵置零
+     */
+    public void setZeroes(int[][] matrix) {
+        int label_row = 0, label_col = 0;
+        boolean findZero = false;
+        for (int i = 0; i < matrix.length && !findZero; i++) {
+            for (int j = 0; j < matrix[0].length && !findZero; j++) {
+                if (matrix[i][j] == 0) {
+                    label_row = i;
+                    label_col = j;
+                    findZero = true;
+                }
+            }
+        }
+        if (findZero) {
+            for (int i = 0; i < matrix.length; i++) {
+                matrix[i][label_col] = matrix[i][label_col] == 0 ? 1 : 0;
+            }
+            for (int j = 0; j < matrix[0].length; j++) {
+                matrix[label_row][j] = matrix[label_row][j] == 0 ? 1 : 0;
+            }
+            for (int i = label_row + 1; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[0].length; j++) {
+                    if (matrix[i][j] == 0 && i != label_row && j != label_col) {
+                        matrix[label_row][j] = 1;
+                        matrix[i][label_col] = 1;
+                    }
+                }
+            }
+            for (int i = 0; i < matrix.length; i++) {
+                if (matrix[i][label_col] == 1) {
+                    for (int j = 0; j < matrix[0].length; j++) {
+                        matrix[i][j] = 0;
+                    }
+                }
+            }
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[label_row][j] == 1) {
+                    for (int i = 0; i < matrix.length; i++) {
+                        matrix[i][j] = 0;
+                    }
+                }
+            }
+        }
+    }
 }

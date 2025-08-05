@@ -54,7 +54,8 @@ public class TestRunner {
 //        testMinWindow(solution);
 //        testIsValidSudoku(solution);
 //        testSpiralOrder(solution);
-        testRotateImage(solution);
+//        testRotateImage(solution);
+        testSetZeroes(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -415,4 +416,13 @@ public class TestRunner {
         SimpleTest.testInPlace("48. 旋转图像", original, matrix);
     }
 
+    /**
+     * 测试 73. 矩阵置零
+     */
+    private static void testSetZeroes(TopInterview150Part1 solution) {
+        int[][] matrix = {{1, 0}};
+        int[][] original = SimpleTest.copy(matrix);
+        solution.setZeroes(matrix);
+        SimpleTest.testInPlace("73. 矩阵置零", original, matrix);
+    }
 }
