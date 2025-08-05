@@ -747,4 +747,35 @@ public class TopInterview150Part1 {
         }
         return true;
     }
+
+    /**
+     * 36. 有效的数独
+     */
+    public boolean isValidSudoku(char[][] board) {
+        Set<Character> row = new HashSet<>(9);
+        Map<Integer, Set<Character>> columns = new HashMap<>(9);
+        Map<Integer, Set<Character>> blocks = new HashMap<>(9);
+        for (int index = 0; index < 9; index++) {
+            columns.put(index, new HashSet<>(9));
+            blocks.put(index, new HashSet<>(9));
+        }
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                char currentChar = board[i][j];
+                int blockIndex = (i / 3) * 3 + j / 3;
+                if (currentChar == '.') {
+                    continue;
+                }
+                if (row.contains(currentChar) || columns.get(j).contains(currentChar) || blocks.get(blockIndex).contains(currentChar)) {
+                    return false;
+                }
+                row.add(currentChar);
+                columns.get(j).add(currentChar);
+                blocks.get(blockIndex).add(currentChar);
+            }
+            row.clear();
+        }
+        return true;
+    }
 }

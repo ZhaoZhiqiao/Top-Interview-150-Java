@@ -129,6 +129,7 @@ public class SimpleTest {
             case char[] arr -> Arrays.toString(arr);
             case String[] arr -> Arrays.toString(arr);
             case int[][] matrix -> Arrays.deepToString(matrix);
+            case char[][] matrix -> Arrays.deepToString(matrix);  // 添加对char[][]的支持
             case Object[] arr -> Arrays.toString(arr);
             case ListNode node -> node.toString();
             case TreeNode tree -> Arrays.toString(TreeNode.toArray(tree));
@@ -174,6 +175,17 @@ public class SimpleTest {
     }
 
     /**
+     * 快速创建二维字符数组
+     */
+    public static char[][] charMatrix(String... rows) {
+        char[][] matrix = new char[rows.length][];
+        for (int i = 0; i < rows.length; i++) {
+            matrix[i] = rows[i].toCharArray();
+        }
+        return matrix;
+    }
+
+    /**
      * 复制一维数组
      */
     public static int[] copy(int[] arr) {
@@ -196,6 +208,17 @@ public class SimpleTest {
      */
     public static String[] copy(String[] arr) {
         return Arrays.copyOf(arr, arr.length);
+    }
+
+    /**
+     * 复制二维字符数组
+     */
+    public static char[][] copy(char[][] matrix) {
+        char[][] copy = new char[matrix.length][];
+        for (int i = 0; i < matrix.length; i++) {
+            copy[i] = Arrays.copyOf(matrix[i], matrix[i].length);
+        }
+        return copy;
     }
 
 }

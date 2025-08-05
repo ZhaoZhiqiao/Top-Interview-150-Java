@@ -75,7 +75,7 @@ Top-Interview-150-Java/
 - [x] 最小覆盖子串 ![困难](https://img.shields.io/badge/-困难-red)
 
 ### 🔢 矩阵
-- [ ] 有效的数独 ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] 有效的数独 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 螺旋矩阵 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 旋转图像 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 矩阵置零 ![中等](https://img.shields.io/badge/-中等-orange)

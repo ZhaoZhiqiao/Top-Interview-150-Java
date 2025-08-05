@@ -52,6 +52,7 @@ public class TestRunner {
 //        testLengthOfLongestSubstring(solution);
 //        testFindSubstring(solution);
         testMinWindow(solution);
+        testIsValidSudoku(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -374,5 +375,22 @@ public class TestRunner {
         String t = "ABC";
         String result = solution.minWindow(s, t);
         SimpleTest.testReturn("76. 最小覆盖子串", result, s, t);
+    }
+
+    /**
+     * 测试 36. 有效的数独
+     */
+    private static void testIsValidSudoku(TopInterview150Part1 solution) {
+        char[][] board = {{'8', '3', '.', '.', '7', '.', '.', '.', '.'},
+                {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+                {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+                {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+                {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+                {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+                {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+                {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+                {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+        boolean result = solution.isValidSudoku(board);
+        SimpleTest.testReturnWithArray("36. 有效的数独", result, board);
     }
 }
