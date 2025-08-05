@@ -51,8 +51,9 @@ public class TestRunner {
 //        testMinSubArrayLen(solution);
 //        testLengthOfLongestSubstring(solution);
 //        testFindSubstring(solution);
-        testMinWindow(solution);
-        testIsValidSudoku(solution);
+//        testMinWindow(solution);
+//        testIsValidSudoku(solution);
+        testSpiralOrder(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -393,4 +394,15 @@ public class TestRunner {
         boolean result = solution.isValidSudoku(board);
         SimpleTest.testReturnWithArray("36. 有效的数独", result, board);
     }
+
+    /**
+     * 测试 54. 螺旋矩阵
+     */
+    private static void testSpiralOrder(TopInterview150Part1 solution) {
+        int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+        List<Integer> result = solution.spiralOrder(matrix);
+        SimpleTest.testReturnWithArray("54. 螺旋矩阵", result, matrix);
+    }
+
+
 }

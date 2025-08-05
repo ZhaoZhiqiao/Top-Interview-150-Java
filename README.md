@@ -76,7 +76,7 @@ Top-Interview-150-Java/
 
 ### 🔢 矩阵
 - [x] 有效的数独 ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] 螺旋矩阵 ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] 螺旋矩阵 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 旋转图像 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 矩阵置零 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 生命游戏 ![中等](https://img.shields.io/badge/-中等-orange)
@@ -235,9 +235,9 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-33%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-35%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-11%2F39-green)
-![Medium](https://img.shields.io/badge/中等-17%2F77-orange)
+![Medium](https://img.shields.io/badge/中等-19%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-5%2F34-red)
 
 ---
