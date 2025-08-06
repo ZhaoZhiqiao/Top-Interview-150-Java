@@ -65,7 +65,8 @@ public class TestRunner {
 //        testTwoSum1(solution);
 //        testIsHappy(solution);
 //        testContainsNearbyDuplicate(solution);
-        testLongestConsecutive(solution);
+//        testLongestConsecutive(solution);
+        testSummaryRanges(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -531,5 +532,14 @@ public class TestRunner {
         int[] nums = {0};
         int result = solution.longestConsecutive(nums);
         SimpleTest.testReturnWithArray("128. 最长连续序列", result, nums);
+    }
+
+    /**
+     * 测试 228. 汇总区间
+     */
+    private static void testSummaryRanges(TopInterview150Part1 solution) {
+        int[] nums = {0, 1, 2, 4, 5, 7};
+        List<String> result = solution.summaryRanges(nums);
+        SimpleTest.testReturnWithArray("228. 汇总区间", result, nums);
     }
 }

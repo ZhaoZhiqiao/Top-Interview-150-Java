@@ -1086,4 +1086,30 @@ public class TopInterview150Part1 {
         }
         return maxCount;
     }
+
+    /**
+     * 228. 汇总区间
+     */
+    public List<String> summaryRanges(int[] nums) {
+        List<String> result = new ArrayList<>();
+        StringBuilder currentRange = new StringBuilder();
+        int start = 0, end = 0;
+        while (end < nums.length) {
+            currentRange.append(nums[start]);
+            while (end < nums.length - 1 && nums[end + 1] == nums[end] + 1) {
+                end++;
+            }
+            if (start == end) {
+                result.add(String.valueOf(nums[start]));
+            } else {
+                currentRange.append("->").append(nums[end]);
+                result.add(currentRange.toString());
+            }
+            currentRange.setLength(0);
+            start = end + 1;
+            end = start;
+
+        }
+        return result;
+    }
 }
