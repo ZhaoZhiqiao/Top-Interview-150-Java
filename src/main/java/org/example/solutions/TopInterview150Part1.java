@@ -1112,4 +1112,21 @@ public class TopInterview150Part1 {
         }
         return result;
     }
+
+    /**
+     * 56. 合并区间
+     */
+    public int[][] merge(int[][] intervals) {
+        List<int[]> result = new ArrayList<>();
+        Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
+        for (int[] interval : intervals) {
+            int L = interval[0], R = interval[1];
+            if (result.isEmpty() || result.getLast()[1] < L) {
+                result.add(new int[]{L, R});
+            } else {
+                result.getLast()[1] = Math.max(result.getLast()[1], R);
+            }
+        }
+        return result.toArray(new int[result.size()][]);
+    }
 }

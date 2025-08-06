@@ -66,7 +66,8 @@ public class TestRunner {
 //        testIsHappy(solution);
 //        testContainsNearbyDuplicate(solution);
 //        testLongestConsecutive(solution);
-        testSummaryRanges(solution);
+//        testSummaryRanges(solution);
+        testMergeIntervals(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -541,5 +542,14 @@ public class TestRunner {
         int[] nums = {0, 1, 2, 4, 5, 7};
         List<String> result = solution.summaryRanges(nums);
         SimpleTest.testReturnWithArray("228. 汇总区间", result, nums);
+    }
+
+    /**
+     * 测试 56. 合并区间
+     */
+    private static void testMergeIntervals(TopInterview150Part1 solution) {
+        int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+        int[][] result = solution.merge(intervals);
+        SimpleTest.testReturnWithArray("56. 合并区间", result, intervals);
     }
 }
