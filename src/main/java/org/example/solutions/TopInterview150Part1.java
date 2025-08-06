@@ -1066,4 +1066,24 @@ public class TopInterview150Part1 {
         return false;
     }
 
+    /**
+     * 128. 最长连续序列
+     */
+    public int longestConsecutive(int[] nums) {
+        HashSet<Integer> integers = new HashSet<>();
+        int count, maxCount = 0;
+        for (int i : nums) {
+            integers.add(i);
+        }
+        for (int num : integers) {
+            if (!integers.contains(num - 1)) {
+                count = 0;
+                while (integers.contains(num++)) {
+                    count++;
+                }
+                maxCount = Math.max(count, maxCount);
+            }
+        }
+        return maxCount;
+    }
 }

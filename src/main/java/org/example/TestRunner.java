@@ -64,7 +64,8 @@ public class TestRunner {
 //        testGroupAnagrams(solution);
 //        testTwoSum1(solution);
 //        testIsHappy(solution);
-        testContainsNearbyDuplicate(solution);
+//        testContainsNearbyDuplicate(solution);
+        testLongestConsecutive(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -514,12 +515,21 @@ public class TestRunner {
     }
 
     /**
-     * 219. 存在重复元素 II
+     * 测试 219. 存在重复元素 II
      */
     private static void testContainsNearbyDuplicate(TopInterview150Part1 solution) {
         int[] nums = {1, 2, 3, 1};
         int k = 3;
         boolean result = solution.containsNearbyDuplicate(nums, k);
         SimpleTest.testReturnWithArray("219. 存在重复元素 II", result, nums, k);
+    }
+
+    /**
+     * 测试 128. 最长连续序列
+     */
+    private static void testLongestConsecutive(TopInterview150Part1 solution) {
+        int[] nums = {0};
+        int result = solution.longestConsecutive(nums);
+        SimpleTest.testReturnWithArray("128. 最长连续序列", result, nums);
     }
 }
