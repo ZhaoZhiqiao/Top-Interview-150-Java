@@ -879,7 +879,6 @@ public class TopInterview150Part1 {
         }
     }
 
-
     /**
      * 289. 生命游戏
      */
@@ -918,5 +917,22 @@ public class TopInterview150Part1 {
                 }
             }
         }
+    }
+
+    /**
+     * 383. 赎金信
+     */
+    public boolean canConstruct(String ransomNote, String magazine) {
+        HashMap<Character, Integer> magazineMap = new HashMap<>();
+        for (char c : magazine.toCharArray()) {
+            magazineMap.put(c, magazineMap.getOrDefault(c, 0) + 1);
+        }
+        for (char c : ransomNote.toCharArray()) {
+            if (!magazineMap.containsKey(c) || magazineMap.get(c) <= 0) {
+                return false;
+            }
+            magazineMap.put(c, magazineMap.get(c) - 1);
+        }
+        return true;
     }
 }

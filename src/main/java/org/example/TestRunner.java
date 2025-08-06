@@ -56,7 +56,8 @@ public class TestRunner {
 //        testSpiralOrder(solution);
 //        testRotateImage(solution);
 //        testSetZeroes(solution);
-        testGameOfLife(solution);
+//        testGameOfLife(solution);
+        testCanConstruct(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -436,4 +437,16 @@ public class TestRunner {
         solution.gameOfLife(board);
         SimpleTest.testInPlace("289. 生命游戏", original, board);
     }
+
+    /**
+     * 测试 383. 赎金信
+     */
+    private static void testCanConstruct(TopInterview150Part1 solution) {
+        String ransomNote = "a";
+        String magazine = "b";
+        boolean result = solution.canConstruct(ransomNote, magazine);
+        SimpleTest.testReturn("383. 赎金信", result, ransomNote, magazine);
+    }
+
+
 }
