@@ -57,7 +57,8 @@ public class TestRunner {
 //        testRotateImage(solution);
 //        testSetZeroes(solution);
 //        testGameOfLife(solution);
-        testCanConstruct(solution);
+//        testCanConstruct(solution);
+        testIsomorphicStrings(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -448,5 +449,13 @@ public class TestRunner {
         SimpleTest.testReturn("383. 赎金信", result, ransomNote, magazine);
     }
 
-
+    /**
+     * 测试 205. 同构字符串
+     */
+    private static void testIsomorphicStrings(TopInterview150Part1 solution) {
+        String s = "badc";
+        String t = "baba";
+        boolean result = solution.isIsomorphic(s, t);
+        SimpleTest.testReturn("205. 同构字符串", result, s, t);
+    }
 }

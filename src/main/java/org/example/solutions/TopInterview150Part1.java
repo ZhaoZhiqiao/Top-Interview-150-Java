@@ -935,4 +935,20 @@ public class TopInterview150Part1 {
         }
         return true;
     }
+
+    /**
+     * 205. 同构字符串
+     */
+    public boolean isIsomorphic(String s, String t) {
+        HashMap<Character, Character> trans = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            if ((trans.containsKey(s.charAt(i)) && !trans.get(s.charAt(i)).equals(t.charAt(i))) ||
+                    (!trans.containsKey(s.charAt(i)) && trans.containsValue(t.charAt(i)))) {
+                return false;
+            } else {
+                trans.putIfAbsent(s.charAt(i), t.charAt(i));
+            }
+        }
+        return true;
+    }
 }
