@@ -62,7 +62,8 @@ public class TestRunner {
 //        testWordPattern(solution);
 //        testValidAnagram(solution);
 //        testGroupAnagrams(solution);
-        testTwoSum1(solution);
+//        testTwoSum1(solution);
+        testIsHappy(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -500,5 +501,14 @@ public class TestRunner {
         int target = 9;
         int[] result = solution.twoSum(nums, target);
         SimpleTest.testReturnWithArray("1. 两数之和", result, nums, target);
+    }
+
+    /**
+     * 测试 202. 快乐数
+     */
+    private static void testIsHappy(TopInterview150Part1 solution) {
+        int n = 19;
+        boolean result = solution.isHappy(n);
+        SimpleTest.testReturn("202. 快乐数", result, n);
     }
 }

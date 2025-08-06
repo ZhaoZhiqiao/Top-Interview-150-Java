@@ -88,7 +88,7 @@ Top-Interview-150-Java/
 - [x] 有效的字母异位词 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 字母异位词分组 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 两数之和 ![简单](https://img.shields.io/badge/-简单-green)
-- [ ] 快乐数 ![简单](https://img.shields.io/badge/-简单-green)
+- [x] 快乐数 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 存在重复元素 II ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 最长连续序列 ![中等](https://img.shields.io/badge/-中等-orange)
 
@@ -235,8 +235,8 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-44%2F150-red)
-![Easy](https://img.shields.io/badge/简单-16%2F39-green)
+![Progress](https://img.shields.io/badge/完成进度-45%2F150-red)
+![Easy](https://img.shields.io/badge/简单-17%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-23%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-5%2F34-red)
 
