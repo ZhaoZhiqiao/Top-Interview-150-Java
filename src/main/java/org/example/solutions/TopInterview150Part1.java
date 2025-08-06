@@ -951,4 +951,24 @@ public class TopInterview150Part1 {
         }
         return true;
     }
+
+    /**
+     * 290. 单词规律
+     */
+    public boolean wordPattern(String pattern, String s) {
+        String[] words = s.split("\\s");
+        HashMap<Character, String> trans = new HashMap<>();
+        if(words.length != pattern.length()){
+            return false;
+        }
+        for (int i = 0; i < pattern.length(); i++) {
+            if ((trans.containsKey(pattern.charAt(i)) && !trans.get(pattern.charAt(i)).equals(words[i])) ||
+                    (!trans.containsKey(pattern.charAt(i)) && trans.containsValue(words[i]))) {
+                return false;
+            } else {
+                trans.putIfAbsent(pattern.charAt(i), words[i]);
+            }
+        }
+        return true;
+    }
 }

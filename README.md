@@ -84,7 +84,7 @@ Top-Interview-150-Java/
 ### 🗂️ 哈希表
 - [x] 赎金信 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 同构字符串 ![简单](https://img.shields.io/badge/-简单-green)
-- [ ] 单词规律 ![简单](https://img.shields.io/badge/-简单-green)
+- [x] 单词规律 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 有效的字母异位词 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 字母异位词分组 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 两数之和 ![简单](https://img.shields.io/badge/-简单-green)
@@ -235,8 +235,8 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-40%2F150-red)
-![Easy](https://img.shields.io/badge/简单-13%2F39-green)
+![Progress](https://img.shields.io/badge/完成进度-41%2F150-red)
+![Easy](https://img.shields.io/badge/简单-14%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-22%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-5%2F34-red)
 

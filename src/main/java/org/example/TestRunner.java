@@ -58,7 +58,8 @@ public class TestRunner {
 //        testSetZeroes(solution);
 //        testGameOfLife(solution);
 //        testCanConstruct(solution);
-        testIsomorphicStrings(solution);
+//        testIsomorphicStrings(solution);
+        testWordPattern(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -457,5 +458,15 @@ public class TestRunner {
         String t = "baba";
         boolean result = solution.isIsomorphic(s, t);
         SimpleTest.testReturn("205. 同构字符串", result, s, t);
+    }
+
+    /**
+     * 测试 290. 单词规律
+     */
+    private static void testWordPattern(TopInterview150Part1 solution) {
+        String pattern = "abba";
+        String s = "dog cat cat dog";
+        boolean result = solution.wordPattern(pattern, s);
+        SimpleTest.testReturn("290. 单词规律", result, pattern, s);
     }
 }
