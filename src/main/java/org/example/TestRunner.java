@@ -67,7 +67,8 @@ public class TestRunner {
 //        testContainsNearbyDuplicate(solution);
 //        testLongestConsecutive(solution);
 //        testSummaryRanges(solution);
-        testMergeIntervals(solution);
+//        testMergeIntervals(solution);
+        testInsertIntervals(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -551,5 +552,15 @@ public class TestRunner {
         int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
         int[][] result = solution.merge(intervals);
         SimpleTest.testReturnWithArray("56. 合并区间", result, intervals);
+    }
+
+    /**
+     * 测试 57. 插入区间
+     */
+    private static void testInsertIntervals(TopInterview150Part1 solution) {
+        int[][] intervals = {{1, 3}, {6, 9}};
+        int[] newInterval = {2, 5};
+        int[][] result = solution.insert(intervals, newInterval);
+        SimpleTest.testReturnWithArrays("57. 插入区间", result, intervals, newInterval);
     }
 }

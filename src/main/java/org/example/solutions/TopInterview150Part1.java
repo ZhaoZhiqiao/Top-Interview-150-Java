@@ -1129,4 +1129,28 @@ public class TopInterview150Part1 {
         }
         return result.toArray(new int[result.size()][]);
     }
+
+    /**
+     * 57. 插入区间
+     */
+    public int[][] insert(int[][] intervals, int[] newInterval) {
+        List<int[]> result = new ArrayList<>();
+        boolean isInserted = false;
+        for (int[] interval : intervals) {
+            if (interval[1] < newInterval[0]) {
+                result.add(interval);
+            } else if (interval[0] > newInterval[1]) {
+                if (!isInserted) {
+                    result.add(newInterval);
+                    isInserted = true;
+                }
+                result.add(interval);
+            } else {
+                newInterval[0] = Math.min(newInterval[0], interval[0]);
+                newInterval[1] = Math.max(newInterval[1], interval[1]);
+            }
+        }
+        if (!isInserted) result.add(newInterval);
+        return result.toArray(new int[result.size()][]);
+    }
 }
