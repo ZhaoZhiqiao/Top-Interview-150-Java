@@ -55,7 +55,8 @@ public class TestRunner {
 //        testIsValidSudoku(solution);
 //        testSpiralOrder(solution);
 //        testRotateImage(solution);
-        testSetZeroes(solution);
+//        testSetZeroes(solution);
+        testGameOfLife(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -424,5 +425,15 @@ public class TestRunner {
         int[][] original = SimpleTest.copy(matrix);
         solution.setZeroes(matrix);
         SimpleTest.testInPlace("73. 矩阵置零", original, matrix);
+    }
+
+    /**
+     * 测试 289. 生命游戏
+     */
+    private static void testGameOfLife(TopInterview150Part1 solution) {
+        int[][] board = {{0, 1, 0}, {0, 0, 1}, {1, 1, 1}, {0, 0, 0}};
+        int[][] original = SimpleTest.copy(board);
+        solution.gameOfLife(board);
+        SimpleTest.testInPlace("289. 生命游戏", original, board);
     }
 }

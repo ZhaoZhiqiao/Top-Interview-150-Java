@@ -878,4 +878,45 @@ public class TopInterview150Part1 {
             }
         }
     }
+
+
+    /**
+     * 289. 生命游戏
+     */
+    public void gameOfLife(int[][] board) {
+        for (int row = 0; row < board.length; row++) {
+            for (int col = 0; col < board[0].length; col++) {
+                int liveNeighbors = 0;
+                for (int i = -1; i <= 1; i++) {
+                    for (int j = -1; j <= 1; j++) {
+                        if (i == 0 && j == 0) continue;
+                        int newRow = row + i, newCol = col + j;
+                        if (newRow >= 0 && newRow < board.length && newCol >= 0 && newCol < board[0].length) {
+                            if (board[newRow][newCol] == 1 || board[newRow][newCol] == 2) {
+                                liveNeighbors++;
+                            }
+                        }
+                    }
+                }
+                if (board[row][col] == 1) {
+                    if (liveNeighbors < 2 || liveNeighbors > 3) {
+                        board[row][col] = 2; // 变为死细胞
+                    }
+                } else if (board[row][col] == 0) {
+                    if (liveNeighbors == 3) {
+                        board[row][col] = 3; // 变为活细胞
+                    }
+                }
+            }
+        }
+        for (int row = 0; row < board.length; row++) {
+            for (int col = 0; col < board[0].length; col++) {
+                if (board[row][col] == 2) {
+                    board[row][col] = 0; // 死细胞
+                } else if (board[row][col] == 3) {
+                    board[row][col] = 1; // 活细胞
+                }
+            }
+        }
+    }
 }
