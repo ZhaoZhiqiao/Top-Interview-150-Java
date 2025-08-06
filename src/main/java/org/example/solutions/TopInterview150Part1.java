@@ -555,7 +555,7 @@ public class TopInterview150Part1 {
     /**
      * 167. 两数之和 II - 输入有序数组
      */
-    public int[] twoSum(int[] numbers, int target) {
+    public int[] twoSum2(int[] numbers, int target) {
         int slow = 0, fast = numbers.length - 1;
         while (slow < fast) {
             int sum = numbers[slow] + numbers[fast];
@@ -976,7 +976,7 @@ public class TopInterview150Part1 {
      * 242. 有效的字母异位词
      */
     public boolean isAnagram(String s, String t) {
-        if (s.length()!=t.length()){
+        if (s.length() != t.length()) {
             return false;
         }
         HashMap<Character, Integer> map = new HashMap<>();
@@ -991,4 +991,43 @@ public class TopInterview150Part1 {
         }
         return true;
     }
+
+    /**
+     *  49. 字母异位词分组
+     */
+    public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> result = new ArrayList<>();
+        for (String str : strs) {
+            boolean findGroup = false;
+            for (List<String> group : result) {
+                if (isAnagram(str, group.getFirst())) {
+                    group.add(str);
+                    findGroup = true;
+                    break;
+                }
+            }
+            if (!findGroup) {
+                List<String> newGroup = new ArrayList<>();
+                newGroup.add(str);
+                result.add(newGroup);
+            }
+        }
+        return result;
+    }
+
+    /**
+     *  1. 两数之和
+     */
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+            map.put(nums[i], i);
+        }
+        return new int[0];
+    }
+
 }

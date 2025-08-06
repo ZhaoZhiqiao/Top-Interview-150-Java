@@ -45,7 +45,7 @@ public class TestRunner {
 //        testFullJustify(solution);
 //        testIsPalindrome(solution);
 //        testIsSubsequence(solution);
-//        testTwoSum(solution);
+//        testTwoSum2(solution);
 //        testMaxArea(solution);
 //        testThreeSum(solution);
 //        testMinSubArrayLen(solution);
@@ -60,7 +60,9 @@ public class TestRunner {
 //        testCanConstruct(solution);
 //        testIsomorphicStrings(solution);
 //        testWordPattern(solution);
-        testValidAnagram(solution);
+//        testValidAnagram(solution);
+//        testGroupAnagrams(solution);
+        testTwoSum1(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -321,10 +323,10 @@ public class TestRunner {
     /**
      * 测试 167. 两数之和 II - 输入有序数组
      */
-    private static void testTwoSum(TopInterview150Part1 solution) {
+    private static void testTwoSum2(TopInterview150Part1 solution) {
         int[] numbers = {2, 7, 11, 15};
         int target = 9;
-        int[] result = solution.twoSum(numbers, target);
+        int[] result = solution.twoSum2(numbers, target);
         SimpleTest.testReturnWithArray("167. 两数之和 II - 输入有序数组", result, numbers, target);
     }
 
@@ -479,5 +481,24 @@ public class TestRunner {
         String t = "nagaram";
         boolean result = solution.isAnagram(s, t);
         SimpleTest.testReturn("242. 有效的字母异位词", result, s, t);
+    }
+
+    /**
+     * 测试 49. 字母异位词分组
+     */
+    private static void testGroupAnagrams(TopInterview150Part1 solution) {
+        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        List<List<String>> result = solution.groupAnagrams(strs);
+        SimpleTest.testReturnWithArray("49. 字母异位词分组", result, strs);
+    }
+
+    /**
+     * 测试 1. 两数之和
+     */
+    private static void testTwoSum1(TopInterview150Part1 solution) {
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+        int[] result = solution.twoSum(nums, target);
+        SimpleTest.testReturnWithArray("1. 两数之和", result, nums, target);
     }
 }
