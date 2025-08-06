@@ -63,7 +63,8 @@ public class TestRunner {
 //        testValidAnagram(solution);
 //        testGroupAnagrams(solution);
 //        testTwoSum1(solution);
-        testIsHappy(solution);
+//        testIsHappy(solution);
+        testContainsNearbyDuplicate(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -510,5 +511,15 @@ public class TestRunner {
         int n = 19;
         boolean result = solution.isHappy(n);
         SimpleTest.testReturn("202. 快乐数", result, n);
+    }
+
+    /**
+     * 219. 存在重复元素 II
+     */
+    private static void testContainsNearbyDuplicate(TopInterview150Part1 solution) {
+        int[] nums = {1, 2, 3, 1};
+        int k = 3;
+        boolean result = solution.containsNearbyDuplicate(nums, k);
+        SimpleTest.testReturnWithArray("219. 存在重复元素 II", result, nums, k);
     }
 }
