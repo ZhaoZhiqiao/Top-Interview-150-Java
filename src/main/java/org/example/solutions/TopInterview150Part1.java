@@ -958,7 +958,7 @@ public class TopInterview150Part1 {
     public boolean wordPattern(String pattern, String s) {
         String[] words = s.split("\\s");
         HashMap<Character, String> trans = new HashMap<>();
-        if(words.length != pattern.length()){
+        if (words.length != pattern.length()) {
             return false;
         }
         for (int i = 0; i < pattern.length(); i++) {
@@ -967,6 +967,26 @@ public class TopInterview150Part1 {
                 return false;
             } else {
                 trans.putIfAbsent(pattern.charAt(i), words[i]);
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 242. 有效的字母异位词
+     */
+    public boolean isAnagram(String s, String t) {
+        if (s.length()!=t.length()){
+            return false;
+        }
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (char ch : s.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+        for (char ch : t.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) - 1);
+            if (map.get(ch) < 0) {
+                return false;
             }
         }
         return true;

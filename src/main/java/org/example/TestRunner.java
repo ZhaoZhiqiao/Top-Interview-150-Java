@@ -59,7 +59,8 @@ public class TestRunner {
 //        testGameOfLife(solution);
 //        testCanConstruct(solution);
 //        testIsomorphicStrings(solution);
-        testWordPattern(solution);
+//        testWordPattern(solution);
+        testValidAnagram(solution);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -468,5 +469,15 @@ public class TestRunner {
         String s = "dog cat cat dog";
         boolean result = solution.wordPattern(pattern, s);
         SimpleTest.testReturn("290. 单词规律", result, pattern, s);
+    }
+
+    /**
+     * 测试 242. 有效的字母异位词
+     */
+    private static void testValidAnagram(TopInterview150Part1 solution) {
+        String s = "anagram";
+        String t = "nagaram";
+        boolean result = solution.isAnagram(s, t);
+        SimpleTest.testReturn("242. 有效的字母异位词", result, s, t);
     }
 }
