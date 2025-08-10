@@ -74,4 +74,34 @@ public class TopInterview150Part2 {
         return new_path.toString();
     }
 
+    /**
+     * 155. 最小栈
+     */
+    public static class MinStack {
+        Deque<Integer> stack;
+        PriorityQueue<Integer> minQueue;
+
+        public MinStack() {
+            stack = new ArrayDeque<>();
+            minQueue = new PriorityQueue<>();
+        }
+
+        public void push(int val) {
+            stack.push(val);
+            minQueue.offer(val);
+        }
+
+        public void pop() {
+            minQueue.remove(stack.peek());
+            stack.pop();
+        }
+
+        public int top() {
+            return stack.isEmpty() ? 0 : stack.peek();
+        }
+
+        public int getMin() {
+            return minQueue.isEmpty() ? 0 : minQueue.peek();
+        }
+    }
 }

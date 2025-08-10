@@ -72,7 +72,8 @@ public class TestRunner {
 //        testInsertIntervals(solution1);
 //        testFindMinArrowShots(solution2);
 //        testIsValid(solution2);
-        testSimplifyPath(solution2);
+//        testSimplifyPath(solution2);
+        testMinStack(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -593,5 +594,21 @@ public class TestRunner {
         String path = "/../";
         String result = solution.simplifyPath(path);
         SimpleTest.testReturn("71. 简化路径", result, path);
+    }
+
+    /**
+     * 测试 155. 最小栈
+     */
+    private static void testMinStack(TopInterview150Part2 solution) {
+        TopInterview150Part2.MinStack minStack = new TopInterview150Part2.MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        int step1 = minStack.getMin(); // 返回 -3.
+        minStack.pop();
+        int step2 = minStack.top();    // 返回 0.
+        int step3 = minStack.getMin(); // 返回 -2.
+        boolean result = (step1 == -3) && (step2 == 0) && (step3 == -2);
+        SimpleTest.testReturn("155. 最小栈", result);
     }
 }
