@@ -31,4 +31,20 @@ public class TopInterview150Part2 {
         }
         return intervals.size();
     }
+
+    /**
+     * 20. 有效的括号
+     */
+    public boolean isValid(String s) {
+        Map<Character, Character> pair = Map.of(')', '(', '}', '{', ']', '[');
+        Deque<Character> stack = new ArrayDeque<>();
+        for (Character c : s.toCharArray()) {
+            if (pair.containsKey(c) && stack.peek() == pair.get(c)){
+                stack.pop();
+            }else {
+                stack.push(c);
+            }
+        }
+        return stack.isEmpty();
+    }
 }

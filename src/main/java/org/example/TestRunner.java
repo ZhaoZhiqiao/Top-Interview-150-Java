@@ -70,7 +70,8 @@ public class TestRunner {
 //        testSummaryRanges(solution1);
 //        testMergeIntervals(solution1);
 //        testInsertIntervals(solution1);
-        testFindMinArrowShots(solution2);
+//        testFindMinArrowShots(solution2);
+        testIsValid(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -573,5 +574,14 @@ public class TestRunner {
         int[][] points = {{10, 16}, {2, 8}, {1, 6}, {7, 12}};
         int result = solution.findMinArrowShots(points);
         SimpleTest.testReturnWithArray("452. 用最少数量的箭引爆气球", result, points);
+    }
+
+    /**
+     * 测试 20. 有效的括号
+     */
+    private static void testIsValid(TopInterview150Part2 solution) {
+        String s = "()[]{}";
+        boolean result = solution.isValid(s);
+        SimpleTest.testReturn("20. 有效的括号", result, s);
     }
 }

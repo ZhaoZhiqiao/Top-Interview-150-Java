@@ -99,7 +99,7 @@ Top-Interview-150-Java/
 - [x] 用最少数量的箭引爆气球 ![中等](https://img.shields.io/badge/-中等-orange)
 
 ### 📚 栈
-- [ ] 有效的括号 ![简单](https://img.shields.io/badge/-简单-green)
+- [x] 有效的括号 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 简化路径 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 最小栈 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 逆波兰表达式求值 ![中等](https://img.shields.io/badge/-中等-orange)
@@ -235,8 +235,8 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-51%2F150-red)
-![Easy](https://img.shields.io/badge/简单-19%2F39-green)
+![Progress](https://img.shields.io/badge/完成进度-52%2F150-red)
+![Easy](https://img.shields.io/badge/简单-20%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-27%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-5%2F34-red)
 
