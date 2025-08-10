@@ -71,7 +71,8 @@ public class TestRunner {
 //        testMergeIntervals(solution1);
 //        testInsertIntervals(solution1);
 //        testFindMinArrowShots(solution2);
-        testIsValid(solution2);
+//        testIsValid(solution2);
+        testSimplifyPath(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -583,5 +584,14 @@ public class TestRunner {
         String s = "()[]{}";
         boolean result = solution.isValid(s);
         SimpleTest.testReturn("20. 有效的括号", result, s);
+    }
+
+    /**
+     * 测试 71. 简化路径
+     */
+    private static void testSimplifyPath(TopInterview150Part2 solution) {
+        String path = "/../";
+        String result = solution.simplifyPath(path);
+        SimpleTest.testReturn("71. 简化路径", result, path);
     }
 }

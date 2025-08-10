@@ -39,12 +39,39 @@ public class TopInterview150Part2 {
         Map<Character, Character> pair = Map.of(')', '(', '}', '{', ']', '[');
         Deque<Character> stack = new ArrayDeque<>();
         for (Character c : s.toCharArray()) {
-            if (pair.containsKey(c) && stack.peek() == pair.get(c)){
+            if (pair.containsKey(c) && stack.peek() == pair.get(c)) {
                 stack.pop();
-            }else {
+            } else {
                 stack.push(c);
             }
         }
         return stack.isEmpty();
     }
+
+    /**
+     * 71. 简化路径
+     */
+    public String simplifyPath(String path) {
+        Deque<String> deque = new ArrayDeque<>();
+        String[] parts = path.split("/+");
+        StringBuilder new_path = new StringBuilder();
+        for (String part : parts) {
+            if (part.equals("..")) {
+                if (deque.isEmpty()) continue;
+                deque.pop();
+            } else if (!part.equals(".") && !part.isEmpty()) {
+                deque.push(part);
+            }
+        }
+        if (deque.isEmpty()) {
+            new_path.append("/");
+        } else {
+            int n = deque.size();
+            for (int i = 0; i < n; i++) {
+                new_path.append("/").append(deque.pollLast());
+            }
+        }
+        return new_path.toString();
+    }
+
 }
