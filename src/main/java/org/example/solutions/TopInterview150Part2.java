@@ -104,4 +104,25 @@ public class TopInterview150Part2 {
             return minQueue.isEmpty() ? 0 : minQueue.peek();
         }
     }
+
+    /**
+     * 150. 逆波兰表达式求值
+     */
+    public int evalRPN(String[] tokens) {
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (String token : tokens) {
+            if (token.matches("[+\\-*/]")) {
+                int b = stack.pop(), a = stack.pop();
+                switch (token) {
+                    case "+": stack.push(a + b); break;
+                    case "-": stack.push(a - b); break;
+                    case "*": stack.push(a * b); break;
+                    case "/": stack.push(a / b); break;
+                }
+            } else {
+                stack.push(Integer.parseInt(token));
+            }
+        }
+        return stack.pop();
+    }
 }

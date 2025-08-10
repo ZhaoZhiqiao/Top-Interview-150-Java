@@ -73,7 +73,8 @@ public class TestRunner {
 //        testFindMinArrowShots(solution2);
 //        testIsValid(solution2);
 //        testSimplifyPath(solution2);
-        testMinStack(solution2);
+//        testMinStack(solution2);
+        testEvalRPN(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -610,5 +611,14 @@ public class TestRunner {
         int step3 = minStack.getMin(); // 返回 -2.
         boolean result = (step1 == -3) && (step2 == 0) && (step3 == -2);
         SimpleTest.testReturn("155. 最小栈", result);
+    }
+
+    /**
+     * 测试 150. 逆波兰表达式求值
+     */
+    private static void testEvalRPN(TopInterview150Part2 solution) {
+        String[] tokens = {"2", "1", "+", "3", "*"};
+        int result = solution.evalRPN(tokens);
+        SimpleTest.testReturnWithArray("150. 逆波兰表达式求值", result, tokens);
     }
 }
