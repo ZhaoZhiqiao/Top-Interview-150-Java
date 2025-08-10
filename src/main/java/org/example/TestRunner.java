@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.solutions.TopInterview150Part1;
+import org.example.solutions.TopInterview150Part2;
 import org.example.utils.SimpleTest;
 
 import java.util.List;
@@ -16,59 +17,60 @@ import java.util.List;
 public class TestRunner {
 
     public static void main(String[] args) {
-        TopInterview150Part1 solution = new TopInterview150Part1();
-
+        TopInterview150Part1 solution1 = new TopInterview150Part1();
+        TopInterview150Part2 solution2 = new TopInterview150Part2();
         // 🔽 只保留您想测试的题目，注释掉其他的
-//        testMerge(solution);
-//        testRemoveElement(solution);
-//        testRemoveDuplicates(solution);
-//        testRemoveDuplicates2(solution);
-//        testMajorityElement(solution);
-//        testRotate(solution);
-//        testMaxProfit(solution);
-//        testMaxProfit2(solution);
-//        testCanJump(solution);
-//        testJump(solution);
-//        testHIndex(solution);
-//        testRandomizedSet(solution);
-//        testProductExceptSelf(solution);
-//        testCanCompleteCircuit(solution);
-//        testCandy(solution);
-//        testTrap(solution);
-//        testRomanToInt(solution);
-//        testTntToRoman(solution);
-//        testLengthOfLastWord(solution);
-//        testLongestCommonPrefix(solution);
-//        testReverseWords(solution);
-//        testConvert(solution);
-//        testStrStr(solution);
-//        testFullJustify(solution);
-//        testIsPalindrome(solution);
-//        testIsSubsequence(solution);
-//        testTwoSum2(solution);
-//        testMaxArea(solution);
-//        testThreeSum(solution);
-//        testMinSubArrayLen(solution);
-//        testLengthOfLongestSubstring(solution);
-//        testFindSubstring(solution);
-//        testMinWindow(solution);
-//        testIsValidSudoku(solution);
-//        testSpiralOrder(solution);
-//        testRotateImage(solution);
-//        testSetZeroes(solution);
-//        testGameOfLife(solution);
-//        testCanConstruct(solution);
-//        testIsomorphicStrings(solution);
-//        testWordPattern(solution);
-//        testValidAnagram(solution);
-//        testGroupAnagrams(solution);
-//        testTwoSum1(solution);
-//        testIsHappy(solution);
-//        testContainsNearbyDuplicate(solution);
-//        testLongestConsecutive(solution);
-//        testSummaryRanges(solution);
-//        testMergeIntervals(solution);
-        testInsertIntervals(solution);
+//        testMerge(solution1);
+//        testRemoveElement(solution1);
+//        testRemoveDuplicates(solution1);
+//        testRemoveDuplicates2(solution1);
+//        testMajorityElement(solution1);
+//        testRotate(solution1);
+//        testMaxProfit(solution1);
+//        testMaxProfit2(solution1);
+//        testCanJump(solution1);
+//        testJump(solution1);
+//        testHIndex(solution1);
+//        testRandomizedSet(solution1);
+//        testProductExceptSelf(solution1);
+//        testCanCompleteCircuit(solution1);
+//        testCandy(solution1);
+//        testTrap(solution1);
+//        testRomanToInt(solution1);
+//        testTntToRoman(solution1);
+//        testLengthOfLastWord(solution1);
+//        testLongestCommonPrefix(solution1);
+//        testReverseWords(solution1);
+//        testConvert(solution1);
+//        testStrStr(solution1);
+//        testFullJustify(solution1);
+//        testIsPalindrome(solution1);
+//        testIsSubsequence(solution1);
+//        testTwoSum2(solution1);
+//        testMaxArea(solution1);
+//        testThreeSum(solution1);
+//        testMinSubArrayLen(solution1);
+//        testLengthOfLongestSubstring(solution1);
+//        testFindSubstring(solution1);
+//        testMinWindow(solution1);
+//        testIsValidSudoku(solution1);
+//        testSpiralOrder(solution1);
+//        testRotateImage(solution1);
+//        testSetZeroes(solution1);
+//        testGameOfLife(solution1);
+//        testCanConstruct(solution1);
+//        testIsomorphicStrings(solution1);
+//        testWordPattern(solution1);
+//        testValidAnagram(solution1);
+//        testGroupAnagrams(solution1);
+//        testTwoSum1(solution1);
+//        testIsHappy(solution1);
+//        testContainsNearbyDuplicate(solution1);
+//        testLongestConsecutive(solution1);
+//        testSummaryRanges(solution1);
+//        testMergeIntervals(solution1);
+//        testInsertIntervals(solution1);
+        testFindMinArrowShots(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -562,5 +564,14 @@ public class TestRunner {
         int[] newInterval = {2, 5};
         int[][] result = solution.insert(intervals, newInterval);
         SimpleTest.testReturnWithArrays("57. 插入区间", result, intervals, newInterval);
+    }
+
+    /**
+     * 测试 452. 用最少数量的箭引爆气球
+     */
+    private static void testFindMinArrowShots(TopInterview150Part2 solution) {
+        int[][] points = {{10, 16}, {2, 8}, {1, 6}, {7, 12}};
+        int result = solution.findMinArrowShots(points);
+        SimpleTest.testReturnWithArray("452. 用最少数量的箭引爆气球", result, points);
     }
 }

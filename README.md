@@ -96,7 +96,7 @@ Top-Interview-150-Java/
 - [x] 汇总区间 ![简单](https://img.shields.io/badge/-简单-green)
 - [x] 合并区间 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 插入区间 ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] 用最少数量的箭引爆气球 ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] 用最少数量的箭引爆气球 ![中等](https://img.shields.io/badge/-中等-orange)
 
 ### 📚 栈
 - [ ] 有效的括号 ![简单](https://img.shields.io/badge/-简单-green)
@@ -235,9 +235,9 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-50%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-51%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-19%2F39-green)
-![Medium](https://img.shields.io/badge/中等-26%2F77-orange)
+![Medium](https://img.shields.io/badge/中等-27%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-5%2F34-red)
 
 ---
