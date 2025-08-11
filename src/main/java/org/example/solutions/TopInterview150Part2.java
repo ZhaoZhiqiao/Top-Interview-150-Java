@@ -1,5 +1,7 @@
 package org.example.solutions;
 
+import org.example.datastructure.ListNode;
+
 import java.util.*;
 
 
@@ -143,11 +145,25 @@ public class TopInterview150Part2 {
         int sign = 1, result = 0, n = s.length(), i = 0;
         while (i < n) {
             switch (s.charAt(i)) {
-                case ' ': i++;break;
-                case '+': sign = stack.isEmpty() ? 1 : stack.peek();i++;break;
-                case '-': sign = stack.isEmpty() ? 1 : -stack.peek();i++;break;
-                case '(': stack.push(sign);i++;break;
-                case ')': stack.pop();i++;break;
+                case ' ':
+                    i++;
+                    break;
+                case '+':
+                    sign = stack.isEmpty() ? 1 : stack.peek();
+                    i++;
+                    break;
+                case '-':
+                    sign = stack.isEmpty() ? 1 : -stack.peek();
+                    i++;
+                    break;
+                case '(':
+                    stack.push(sign);
+                    i++;
+                    break;
+                case ')':
+                    stack.pop();
+                    i++;
+                    break;
                 default:
                     int num = 0;
                     while (i < n && Character.isDigit(s.charAt(i))) {
@@ -158,5 +174,20 @@ public class TopInterview150Part2 {
             }
         }
         return result;
+    }
+
+    /**
+     * 141. 环形链表
+     */
+    public boolean hasCycle(ListNode head) {
+        HashSet<ListNode> visited = new HashSet<>();
+        while (!visited.contains(head)) {
+            if (head == null) {
+                return false;
+            }
+            visited.add(head);
+            head = head.next;
+        }
+        return true;
     }
 }

@@ -3,6 +3,7 @@ package org.example;
 import org.example.solutions.TopInterview150Part1;
 import org.example.solutions.TopInterview150Part2;
 import org.example.utils.SimpleTest;
+import org.example.datastructure.*;
 
 import java.util.List;
 
@@ -75,7 +76,8 @@ public class TestRunner {
 //        testSimplifyPath(solution2);
 //        testMinStack(solution2);
 //        testEvalRPN(solution2);
-        testCalculate(solution2);
+//        testCalculate(solution2);
+        testHasCycle(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -630,5 +632,18 @@ public class TestRunner {
         String s = "1 + 1";
         int result = solution.calculate(s);
         SimpleTest.testReturn("224. 基本计算器", result, s);
+    }
+
+    /**
+     * 测试 141. 环形链表
+     */
+    private static void testHasCycle(TopInterview150Part2 solution) {
+        ListNode head = new ListNode(3);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(0);
+        head.next.next.next = new ListNode(-4);
+        head.next.next.next.next = head.next; // 创建环
+        boolean result = solution.hasCycle(head);
+        SimpleTest.testReturn("141. 环形链表", result);
     }
 }

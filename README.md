@@ -106,7 +106,7 @@ Top-Interview-150-Java/
 - [x] 基本计算器 ![困难](https://img.shields.io/badge/-困难-red)
 
 ### 🔗 链表
-- [ ] 环形链表 ![简单](https://img.shields.io/badge/-简单-green)
+- [x] 环形链表 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 两数相加 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 合并两个有序链表 ![简单](https://img.shields.io/badge/-简单-green)
 - [ ] 随机链表的复制 ![中等](https://img.shields.io/badge/-中等-orange)
@@ -235,8 +235,8 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-56%2F150-red)
-![Easy](https://img.shields.io/badge/简单-20%2F39-green)
+![Progress](https://img.shields.io/badge/完成进度-57%2F150-red)
+![Easy](https://img.shields.io/badge/简单-21%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-30%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-6%2F34-red)
 
