@@ -245,4 +245,34 @@ public class TopInterview150Part2 {
         current.next = list1 != null ? list1 : list2;
         return dummy.next;
     }
+
+    /**
+     * 138. 随机链表的复制
+     */
+    public Node copyRandomList(Node head) {
+        Node dummy = new Node(0), current = dummy, oldHead = head;
+        while (head != null) {
+            Node newNode = new Node(head.val);
+            newNode.next = head.next;
+            head.next = newNode;
+            head = head.next.next;
+        }
+
+        head = oldHead;
+        while (head != null) {
+            Node newNode = head.next;
+            newNode.random = head.random == null ? null : head.random.next;
+            head = head.next.next;
+        }
+
+        while (oldHead != null) {
+            Node newNode = oldHead.next;
+            oldHead.next = oldHead.next.next;
+            oldHead = oldHead.next;
+            current.next = newNode;
+            current = current.next;
+        }
+
+        return dummy.next;
+    }
 }

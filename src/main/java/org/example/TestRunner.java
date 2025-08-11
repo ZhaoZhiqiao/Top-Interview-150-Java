@@ -79,7 +79,8 @@ public class TestRunner {
 //        testCalculate(solution2);
 //        testHasCycle(solution2);
 //        testAddTwoNumbers(solution2);
-        testMergeTwoLists(solution2);
+//        testMergeTwoLists(solution2);
+        testCopyRandomList(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -669,5 +670,27 @@ public class TestRunner {
         ListNode resultNode = solution.mergeTwoLists(l1, l2);
         int[] result = ListNode.toArray(resultNode);
         SimpleTest.testReturnWithArrays("21. 合并两个有序链表", result, l1, l2);
+    }
+
+    /**
+     * 测试 138. 随机链表的复制
+     */
+    private static void testCopyRandomList(TopInterview150Part2 solution) {
+        Node head = new Node(7);
+        head.next = new Node(13);
+        head.next.next = new Node(11);
+        head.next.next.next = new Node(10);
+        head.next.next.next.next = new Node(1);
+
+        head.random = null;
+        head.next.random = head; // 13 -> 7
+        head.next.next.random = head.next.next.next.next; // 11 -> 1
+        head.next.next.next.random = head.next; // 10 -> 13
+        head.next.next.next.next.random = head; // 1 -> 7
+
+        Node resultNode = solution.copyRandomList(head);
+        String result = Node.toString(resultNode);
+        String expected = "[7,null],[13,0],[11,4],[10,2],[1,0]";
+        SimpleTest.testReturn("138. 随机链表的复制", result, expected);
     }
 }
