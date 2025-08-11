@@ -1,6 +1,6 @@
 package org.example.solutions;
 
-import org.example.datastructure.ListNode;
+import org.example.datastructure.*;
 
 import java.util.*;
 
@@ -224,5 +224,25 @@ public class TopInterview150Part2 {
             current.next = new ListNode(1);
         }
         return dummyNode.next;
+    }
+
+    /**
+     * 21. 合并两个有序链表
+     */
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode dummy = new ListNode(0), current = dummy;
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                current.next = list1;
+                current = current.next;
+                list1 = list1.next;
+            } else {
+                current.next = list2;
+                current = current.next;
+                list2 = list2.next;
+            }
+        }
+        current.next = list1 != null ? list1 : list2;
+        return dummy.next;
     }
 }

@@ -20,4 +20,21 @@ public class Node {
         this.next = next;
         this.random = random;
     }
+
+    public static String toString(Node resultNode) {
+        StringBuilder sb = new StringBuilder();
+        Node current = resultNode;
+        while (current != null) {
+            sb.append("[").append(current.val);
+            if (current.random != null) {
+                sb.append(", random: ").append(current.random.val);
+            } else {
+                sb.append(", random: null");
+            }
+            sb.append("] -> ");
+            current = current.next;
+        }
+        sb.append("null");
+        return sb.toString();
+    }
 }

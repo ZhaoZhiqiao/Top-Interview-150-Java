@@ -78,7 +78,8 @@ public class TestRunner {
 //        testEvalRPN(solution2);
 //        testCalculate(solution2);
 //        testHasCycle(solution2);
-        testAddTwoNumbers(solution2);
+//        testAddTwoNumbers(solution2);
+        testMergeTwoLists(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -657,5 +658,16 @@ public class TestRunner {
         ListNode resultNode = solution.addTwoNumbers(l1, l2);
         int[] result = ListNode.toArray(resultNode);
         SimpleTest.testReturnWithArrays("2. 两数相加", result, l1, l2);
+    }
+
+    /**
+     * 测试 21. 合并两个有序链表
+     */
+    private static void testMergeTwoLists(TopInterview150Part2 solution) {
+        ListNode l1 = ListNode.fromArray(new int[]{1, 2, 4});
+        ListNode l2 = ListNode.fromArray(new int[]{1, 3, 4});
+        ListNode resultNode = solution.mergeTwoLists(l1, l2);
+        int[] result = ListNode.toArray(resultNode);
+        SimpleTest.testReturnWithArrays("21. 合并两个有序链表", result, l1, l2);
     }
 }
