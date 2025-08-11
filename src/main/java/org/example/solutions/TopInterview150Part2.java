@@ -114,15 +114,49 @@ public class TopInterview150Part2 {
             if (token.matches("[+\\-*/]")) {
                 int b = stack.pop(), a = stack.pop();
                 switch (token) {
-                    case "+": stack.push(a + b); break;
-                    case "-": stack.push(a - b); break;
-                    case "*": stack.push(a * b); break;
-                    case "/": stack.push(a / b); break;
+                    case "+":
+                        stack.push(a + b);
+                        break;
+                    case "-":
+                        stack.push(a - b);
+                        break;
+                    case "*":
+                        stack.push(a * b);
+                        break;
+                    case "/":
+                        stack.push(a / b);
+                        break;
                 }
             } else {
                 stack.push(Integer.parseInt(token));
             }
         }
         return stack.pop();
+    }
+
+    /**
+     * 224. 基本计算器
+     */
+    public int calculate(String s) {
+        Deque<Integer> stack = new LinkedList<>();
+        stack.push(1);
+        int sign = 1, result = 0, n = s.length(), i = 0;
+        while (i < n) {
+            switch (s.charAt(i)) {
+                case ' ': i++;break;
+                case '+': sign = stack.isEmpty() ? 1 : stack.peek();i++;break;
+                case '-': sign = stack.isEmpty() ? 1 : -stack.peek();i++;break;
+                case '(': stack.push(sign);i++;break;
+                case ')': stack.pop();i++;break;
+                default:
+                    int num = 0;
+                    while (i < n && Character.isDigit(s.charAt(i))) {
+                        num = num * 10 + s.charAt(i) - '0';
+                        i++;
+                    }
+                    result += (sign * num);
+            }
+        }
+        return result;
     }
 }

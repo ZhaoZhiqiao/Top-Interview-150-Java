@@ -74,7 +74,8 @@ public class TestRunner {
 //        testIsValid(solution2);
 //        testSimplifyPath(solution2);
 //        testMinStack(solution2);
-        testEvalRPN(solution2);
+//        testEvalRPN(solution2);
+        testCalculate(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -620,5 +621,14 @@ public class TestRunner {
         String[] tokens = {"2", "1", "+", "3", "*"};
         int result = solution.evalRPN(tokens);
         SimpleTest.testReturnWithArray("150. 逆波兰表达式求值", result, tokens);
+    }
+
+    /**
+     * 测试 224. 基本计算器
+     */
+    private static void testCalculate(TopInterview150Part2 solution) {
+        String s = "1 + 1";
+        int result = solution.calculate(s);
+        SimpleTest.testReturn("224. 基本计算器", result, s);
     }
 }

@@ -103,7 +103,7 @@ Top-Interview-150-Java/
 - [x] 简化路径 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 最小栈 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 逆波兰表达式求值 ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] 基本计算器 ![困难](https://img.shields.io/badge/-困难-red)
+- [x] 基本计算器 ![困难](https://img.shields.io/badge/-困难-red)
 
 ### 🔗 链表
 - [ ] 环形链表 ![简单](https://img.shields.io/badge/-简单-green)
@@ -235,10 +235,10 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-55%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-56%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-20%2F39-green)
 ![Medium](https://img.shields.io/badge/中等-30%2F77-orange)
-![Hard](https://img.shields.io/badge/困难-5%2F34-red)
+![Hard](https://img.shields.io/badge/困难-6%2F34-red)
 
 ---
 
