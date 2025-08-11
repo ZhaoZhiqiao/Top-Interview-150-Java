@@ -77,7 +77,8 @@ public class TestRunner {
 //        testMinStack(solution2);
 //        testEvalRPN(solution2);
 //        testCalculate(solution2);
-        testHasCycle(solution2);
+//        testHasCycle(solution2);
+        testAddTwoNumbers(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -645,5 +646,16 @@ public class TestRunner {
         head.next.next.next.next = head.next; // 创建环
         boolean result = solution.hasCycle(head);
         SimpleTest.testReturn("141. 环形链表", result);
+    }
+
+    /**
+     * 测试 2. 两数相加
+     */
+    private static void testAddTwoNumbers(TopInterview150Part2 solution) {
+        ListNode l1 = ListNode.fromArray(new int[]{2, 4, 3});
+        ListNode l2 = ListNode.fromArray(new int[]{5, 6, 4});
+        ListNode resultNode = solution.addTwoNumbers(l1, l2);
+        int[] result = ListNode.toArray(resultNode);
+        SimpleTest.testReturnWithArrays("2. 两数相加", result, l1, l2);
     }
 }

@@ -190,4 +190,39 @@ public class TopInterview150Part2 {
         }
         return true;
     }
+
+    /**
+     * 2. 两数相加
+     */
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        boolean needCarry = false;
+        ListNode dummyNode = new ListNode(0);
+        ListNode current = dummyNode;
+        while (l1 != null && l2 != null) {
+            int sum = l1.val + l2.val + (needCarry ? 1 : 0);
+            needCarry = sum >= 10;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
+            l1 = l1.next;
+            l2 = l2.next;
+        }
+        while (l1 != null) {
+            int sum = l1.val + (needCarry ? 1 : 0);
+            needCarry = sum >= 10;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
+            l1 = l1.next;
+        }
+        while (l2 != null) {
+            int sum = l2.val + (needCarry ? 1 : 0);
+            needCarry = sum >= 10;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
+            l2 = l2.next;
+        }
+        if (needCarry) {
+            current.next = new ListNode(1);
+        }
+        return dummyNode.next;
+    }
 }
