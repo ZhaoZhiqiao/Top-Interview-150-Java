@@ -1,6 +1,7 @@
 package org.example.solutions;
 
-import org.example.datastructure.*;
+import org.example.datastructure.ListNode;
+import org.example.datastructure.Node;
 
 import java.util.*;
 
@@ -273,6 +274,25 @@ public class TopInterview150Part2 {
             current = current.next;
         }
 
+        return dummy.next;
+    }
+
+    /**
+     * 92. 反转链表 II
+     */
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+        ListNode dummy = new ListNode(0, head);
+        ListNode pre = dummy, end;
+        for (int i = 0; i < left - 1; i++) {
+            pre = pre.next;
+        }
+        end = pre.next;
+        for (int i = left; i < right; i++) {
+            ListNode next = end.next;
+            end.next = next.next;
+            next.next = pre.next;
+            pre.next = next;
+        }
         return dummy.next;
     }
 }

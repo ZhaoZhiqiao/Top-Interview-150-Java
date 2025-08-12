@@ -1,9 +1,10 @@
 package org.example;
 
+import org.example.datastructure.ListNode;
+import org.example.datastructure.Node;
 import org.example.solutions.TopInterview150Part1;
 import org.example.solutions.TopInterview150Part2;
 import org.example.utils.SimpleTest;
-import org.example.datastructure.*;
 
 import java.util.List;
 
@@ -80,7 +81,8 @@ public class TestRunner {
 //        testHasCycle(solution2);
 //        testAddTwoNumbers(solution2);
 //        testMergeTwoLists(solution2);
-        testCopyRandomList(solution2);
+//        testCopyRandomList(solution2);
+        testReverseBetween(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -693,4 +695,18 @@ public class TestRunner {
         String expected = "[7,null],[13,0],[11,4],[10,2],[1,0]";
         SimpleTest.testReturn("138. 随机链表的复制", result, expected);
     }
+
+    /**
+     * 测试 92. 反转链表 II
+     */
+    private static void testReverseBetween(TopInterview150Part2 solution) {
+        ListNode head = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
+        ListNode origin = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
+        int left = 1;
+        int right = 5;
+        ListNode resultNode = solution.reverseBetween(head, left, right);
+        int[] result = ListNode.toArray(resultNode);
+        SimpleTest.testReturnWithArray("92. 反转链表 II", resultNode, origin, left, right);
+    }
+
 }
