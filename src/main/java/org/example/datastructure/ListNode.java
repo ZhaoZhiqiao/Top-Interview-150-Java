@@ -57,6 +57,24 @@ public class ListNode {
         return result.stream().mapToInt(i -> i).toArray();
     }
 
+    public static ListNode copy(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode dummy = new ListNode(0);
+        ListNode currentNew = dummy;
+        ListNode currentOld = head;
+
+        while (currentOld != null) {
+            currentNew.next = new ListNode(currentOld.val);
+            currentNew = currentNew.next;
+            currentOld = currentOld.next;
+        }
+
+        return dummy.next;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

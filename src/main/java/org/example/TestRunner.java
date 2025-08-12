@@ -82,7 +82,8 @@ public class TestRunner {
 //        testAddTwoNumbers(solution2);
 //        testMergeTwoLists(solution2);
 //        testCopyRandomList(solution2);
-        testReverseBetween(solution2);
+//        testReverseBetween(solution2);
+        testReverseKGroup(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -701,12 +702,22 @@ public class TestRunner {
      */
     private static void testReverseBetween(TopInterview150Part2 solution) {
         ListNode head = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
-        ListNode origin = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
+        ListNode origin = ListNode.copy(head);
         int left = 1;
         int right = 5;
         ListNode resultNode = solution.reverseBetween(head, left, right);
-        int[] result = ListNode.toArray(resultNode);
         SimpleTest.testReturnWithArray("92. 反转链表 II", resultNode, origin, left, right);
+    }
+
+    /**
+     * 测试 25. K 个一组翻转链表
+     */
+    private static void testReverseKGroup(TopInterview150Part2 solution) {
+        ListNode head = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
+        ListNode origin = ListNode.copy(head);
+        int k = 2;
+        ListNode resultNode = solution.reverseKGroup(head, k);
+        SimpleTest.testReturnWithArray("25. K 个一组翻转链表", resultNode, origin, k);
     }
 
 }

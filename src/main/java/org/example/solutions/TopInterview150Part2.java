@@ -295,4 +295,28 @@ public class TopInterview150Part2 {
         }
         return dummy.next;
     }
+
+    /**
+     * 25. K 个一组翻转链表
+     */
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode cursor = head;
+        int left = 1, right = k;
+        boolean canFind = true;
+        while (canFind) {
+            for (int i = 0; i < k; i++) {
+                if (cursor == null) {
+                    canFind = false;
+                    break;
+                }
+                cursor = cursor.next;
+            }
+            if (canFind) {
+                head = reverseBetween(head, left, right);
+                left += k;
+                right += k;
+            }
+        }
+        return head;
+    }
 }
