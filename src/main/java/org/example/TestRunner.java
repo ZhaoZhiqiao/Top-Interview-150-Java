@@ -84,7 +84,8 @@ public class TestRunner {
 //        testCopyRandomList(solution2);
 //        testReverseBetween(solution2);
 //        testReverseKGroup(solution2);
-        testRemoveNthFromEnd(solution2);
+//        testRemoveNthFromEnd(solution2);
+        testRemoveDuplicatesFromSortedList2(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -730,5 +731,15 @@ public class TestRunner {
         int n = 2;
         ListNode resultNode = solution.removeNthFromEnd(head, n);
         SimpleTest.testReturnWithArray("19. 删除链表的倒数第 N 个结点", resultNode, origin, n);
+    }
+
+    /**
+     * 测试 82. 删除排序链表中的重复元素 II
+     */
+    private static void testRemoveDuplicatesFromSortedList2(TopInterview150Part2 solution) {
+        ListNode head = ListNode.fromArray(new int[]{1, 2, 3, 3, 4, 4, 5});
+        ListNode origin = ListNode.copy(head);
+        ListNode resultNode = solution.deleteDuplicates(head);
+        SimpleTest.testReturnWithArray("82. 删除排序链表中的重复元素 II", resultNode, origin);
     }
 }

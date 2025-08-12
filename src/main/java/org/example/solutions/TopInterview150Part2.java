@@ -336,4 +336,26 @@ public class TopInterview150Part2 {
         slow.next = slow.next.next;
         return dummy.next;
     }
+
+    /**
+     * 82. 删除排序链表中的重复元素 II
+     */
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode dummy = new ListNode(0, head), cursor = dummy;
+        while (cursor.next != null && cursor.next.next != null) {
+            if (cursor.next.val == cursor.next.next.val) {
+                int x = cursor.next.val;
+                while (cursor.next != null && cursor.next.val == x) {
+                    cursor.next = cursor.next.next;
+                }
+            } else {
+                cursor = cursor.next;
+            }
+
+        }
+        return dummy.next;
+    }
 }
