@@ -114,7 +114,7 @@ Top-Interview-150-Java/
 - [x] K 个一组翻转链表 ![困难](https://img.shields.io/badge/-困难-red)
 - [x] 删除链表的倒数第 N 个结点 ![中等](https://img.shields.io/badge/-中等-orange)
 - [x] 删除排序链表中的重复元素 II ![中等](https://img.shields.io/badge/-中等-orange)
-- [ ] 旋转链表 ![中等](https://img.shields.io/badge/-中等-orange)
+- [x] 旋转链表 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] 分隔链表 ![中等](https://img.shields.io/badge/-中等-orange)
 - [ ] LRU 缓存 ![中等](https://img.shields.io/badge/-中等-orange)
 
@@ -235,9 +235,9 @@ Top-Interview-150-Java/
 
 ## � 进度统计
 
-![Progress](https://img.shields.io/badge/完成进度-64%2F150-red)
+![Progress](https://img.shields.io/badge/完成进度-65%2F150-red)
 ![Easy](https://img.shields.io/badge/简单-23%2F39-green)
-![Medium](https://img.shields.io/badge/中等-34%2F77-orange)
+![Medium](https://img.shields.io/badge/中等-35%2F77-orange)
 ![Hard](https://img.shields.io/badge/困难-7%2F34-red)
 
 ---

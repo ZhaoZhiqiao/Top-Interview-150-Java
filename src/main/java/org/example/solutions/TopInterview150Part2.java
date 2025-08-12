@@ -358,4 +358,37 @@ public class TopInterview150Part2 {
         }
         return dummy.next;
     }
+
+    /**
+     * 61. 旋转链表
+     */
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head == null || head.next == null || k <= 0) {
+            return head;
+        }
+        ListNode dummy = new ListNode(0, head), slow = head, fast = head;
+        int size = 0;
+        while (k > 0 && fast != null) {
+            fast = fast.next;
+            size++;
+            k--;
+        }
+        if (k > 0) {
+            k = k % size;
+            fast = head;
+            while (k-- > 0) {
+                fast = fast.next;
+            }
+        }
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        if (fast != null && fast != slow) {
+            dummy.next = slow.next;
+            slow.next = null;
+            fast.next = head;
+        }
+        return dummy.next;
+    }
 }

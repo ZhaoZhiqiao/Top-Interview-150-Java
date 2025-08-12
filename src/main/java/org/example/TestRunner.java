@@ -85,7 +85,8 @@ public class TestRunner {
 //        testReverseBetween(solution2);
 //        testReverseKGroup(solution2);
 //        testRemoveNthFromEnd(solution2);
-        testRemoveDuplicatesFromSortedList2(solution2);
+//        testRemoveDuplicatesFromSortedList2(solution2);
+        testRotateList(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -741,5 +742,16 @@ public class TestRunner {
         ListNode origin = ListNode.copy(head);
         ListNode resultNode = solution.deleteDuplicates(head);
         SimpleTest.testReturnWithArray("82. 删除排序链表中的重复元素 II", resultNode, origin);
+    }
+
+    /**
+     * 测试 61. 旋转链表
+     */
+    private static void testRotateList(TopInterview150Part2 solution) {
+        ListNode head = ListNode.fromArray(new int[]{0, 1, 2});
+        ListNode original = ListNode.copy(head);
+        int k = 4;
+        ListNode resultNode = solution.rotateRight(head, k);
+        SimpleTest.testReturnWithArray("61. 旋转链表", resultNode, original, k);
     }
 }
