@@ -83,7 +83,8 @@ public class TestRunner {
 //        testMergeTwoLists(solution2);
 //        testCopyRandomList(solution2);
 //        testReverseBetween(solution2);
-        testReverseKGroup(solution2);
+//        testReverseKGroup(solution2);
+        testRemoveNthFromEnd(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -720,4 +721,14 @@ public class TestRunner {
         SimpleTest.testReturnWithArray("25. K 个一组翻转链表", resultNode, origin, k);
     }
 
+    /**
+     * 测试 19. 删除链表的倒数第 N 个结点
+     */
+    private static void testRemoveNthFromEnd(TopInterview150Part2 solution) {
+        ListNode head = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
+        ListNode origin = ListNode.copy(head);
+        int n = 2;
+        ListNode resultNode = solution.removeNthFromEnd(head, n);
+        SimpleTest.testReturnWithArray("19. 删除链表的倒数第 N 个结点", resultNode, origin, n);
+    }
 }
