@@ -391,4 +391,34 @@ public class TopInterview150Part2 {
         }
         return dummy.next;
     }
+
+    /**
+     * 86. 分隔链表
+     */
+    public ListNode partition(ListNode head, int x) {
+        ListNode dummy = new ListNode(0, head), cursor = dummy, end, stop;
+        while (cursor.next != null) {
+            cursor = cursor.next;
+        }
+        end = cursor;
+        stop = cursor;
+        boolean first = true;
+
+        cursor = dummy;
+        while (cursor.next != null && cursor.next != stop) {
+            if (cursor.next.val >= x) {
+                if (first) {
+                    stop = cursor.next;
+                    first = false;
+                }
+                end.next = cursor.next;
+                cursor.next = cursor.next.next;
+                end = end.next;
+                end.next = null;
+            } else {
+                cursor = cursor.next;
+            }
+        }
+        return dummy.next;
+    }
 }

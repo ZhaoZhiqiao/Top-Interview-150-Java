@@ -86,7 +86,8 @@ public class TestRunner {
 //        testReverseKGroup(solution2);
 //        testRemoveNthFromEnd(solution2);
 //        testRemoveDuplicatesFromSortedList2(solution2);
-        testRotateList(solution2);
+//        testRotateList(solution2);
+        testPartition(solution2);
         // 🔼 只保留您想测试的题目，注释掉其他的
     }
 
@@ -753,5 +754,16 @@ public class TestRunner {
         int k = 4;
         ListNode resultNode = solution.rotateRight(head, k);
         SimpleTest.testReturnWithArray("61. 旋转链表", resultNode, original, k);
+    }
+
+    /**
+     * 测试 86. 分隔链表
+     */
+    private static void testPartition(TopInterview150Part2 solution) {
+        ListNode head = ListNode.fromArray(new int[]{1, 4, 3, 2, 5, 2});
+        ListNode origin = ListNode.copy(head);
+        int x = 3;
+        ListNode result = solution.partition(head, x);
+        SimpleTest.testReturnWithArray("86. 分隔链表", result, origin, x);
     }
 }
